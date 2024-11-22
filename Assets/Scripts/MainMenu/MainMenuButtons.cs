@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : MonoBehaviour
 {
+    //Main Menu events
     public void QuitGame()
     {
         Application.Quit();
