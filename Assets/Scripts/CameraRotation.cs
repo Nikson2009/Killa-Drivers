@@ -2,28 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Movement : MonoBehaviour
+public class CameraRotation : MonoBehaviour
 {
     Quaternion mainRotation = Quaternion.Euler(0, 0, 0);
 
-    Camera playerCamera;
+    public Camera playerCamera;
 
     float xRotation;
     float yRotation;
 
     public float sensetivityX;
     public float sensetivityY;
-
-    public float speed = 1f;
     void Start()
     {
-        playerCamera = Camera.current;
-
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    void Update()
+    private void Update()
     {
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensetivityX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensetivityY;
