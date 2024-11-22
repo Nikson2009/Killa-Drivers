@@ -7,11 +7,11 @@ public class InventoryManager : MonoBehaviour
     public GameObject currentWeapon;
 
     float spawnDistance = 2.5f;
-    float spawnForce = 5.25f;
+    float spawnForce = 725f;
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             GameObject weaponResult = Instantiate(currentWeapon, transform.position + transform.forward * spawnDistance, Quaternion.identity);
             weaponResult.GetComponent<Rigidbody>().AddForce(transform.forward * spawnForce, ForceMode.Force);
