@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    public Camera playerCamera;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -40,14 +42,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        moveDirection = orientation.right * horizontalInput - playerCamera.transform.forward * -verticalInput;
 
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
     }
 
     private void SpeedControl()
     {
-        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        Vector3 flatVel = new Vector3(rb.velocity.x, 0f , rb.velocity.z);
 
         if (flatVel.magnitude > moveSpeed)
         {
