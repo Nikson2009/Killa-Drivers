@@ -44,4 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d38d09f958a834cac091cc5e03bfff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectCheckerLink: {fileID: 5109641386466705746, guid: 04363a0f266da0d4c8719d902b830d50,
+    type: 3}
   maxDistanceToHit: 500
+  maxDamagedEnemies: 4
+  damage: 1

@@ -13,6 +13,7 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         GameObject startWeapon = Instantiate(startWeaponLink, Vector3.zero, Quaternion.identity);
+        startWeapon.transform.parent = transform;
         inventoryItems[0] = startWeapon;
     }
 
@@ -22,9 +23,6 @@ public class InventoryManager : MonoBehaviour
         {
             WeaponItemClass currentWeaponScript = inventoryItems[0].GetComponent<WeaponItemClass>();
             currentWeaponScript.UseWeapon(playerCamera);
-
-            //GameObject weaponResult = Instantiate(currentWeapon, playerCamera.transform.position + playerCamera.transform.forward * spawnDistance, Quaternion.identity);
-            //weaponResult.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * spawnForce, ForceMode.Force);
         }
     }
 }
