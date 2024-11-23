@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    [SerializeField] GameObject currentWeapon;
+    [SerializeField] GameObject startWeaponLink;
 
     [SerializeField] Camera playerCamera;
 
-    float spawnDistance = 1.5f;
-    float spawnForce = 725f;
+    GameObject[] inventoryItems = new GameObject[1];
+
+    void Start()
+    {
+        GameObject startWeapon = Instantiate(startWeaponLink, Vector3.zero, Quaternion.identity);
+        inventoryItems[0] = startWeapon;
+    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            GameObject weaponResult = Instantiate(currentWeapon, transform.position + transform.forward * spawnDistance, Quaternion.identity);
-            weaponResult.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * spawnForce, ForceMode.Force);
+            WeaponItemClass currentWeaponScript = inventoryItems[0].GetComponent<WeaponItemClass>();
+            currentWeaponScript.UseWeapon(playerCamera);
+
+            //GameObject weaponResult = Instantiate(currentWeapon, playerCamera.transform.position + playerCamera.transform.forward * spawnDistance, Quaternion.identity);
+            //weaponResult.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * spawnForce, ForceMode.Force);
         }
     }
 }
