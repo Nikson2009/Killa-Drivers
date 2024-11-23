@@ -20,7 +20,7 @@ public class TestWeapon : MonoBehaviour
         for(int i = 0; i < shootPrefabs.Length; i++)
         {
             GameObject curent = shootPrefabs[i];
-            curent.GetComponent<ParticleSystem>
+            //curent.GetComponent<ParticleSystem>
             Ray ray = new Ray(curent.transform.position, curent.transform.forward);
             AS.Stop();
             AS.Play();

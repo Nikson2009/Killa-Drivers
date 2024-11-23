@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public GameObject currentWeapon;
+    [SerializeField] GameObject currentWeapon;
 
-    float spawnDistance = 2.5f;
+    [SerializeField] Camera playerCamera;
+
+    float spawnDistance = 1.5f;
     float spawnForce = 725f;
 
     void Update()
@@ -14,7 +16,7 @@ public class InventoryManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             GameObject weaponResult = Instantiate(currentWeapon, transform.position + transform.forward * spawnDistance, Quaternion.identity);
-            weaponResult.GetComponent<Rigidbody>().AddForce(transform.forward * spawnForce, ForceMode.Force);
+            weaponResult.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * spawnForce, ForceMode.Force);
         }
     }
 }

@@ -9786,7 +9786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8860560466803067645}
   m_Layer: 0
-  m_Name: VFX_GreenExplosive
+  m_Name: VFX_GreenExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14646,7 +14646,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 23c9d46eb333a6744a253e9e46705029, type: 2}
+  - {fileID: 2100000, guid: bd8f84f7a206d7c45bd0b643e5a27643, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

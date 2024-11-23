@@ -2170,8 +2170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f04622bc05e50c44a1602e1e21fcaf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 749661537632286453, guid: 9df2a19a7cfb31d489eb37b488dfa41d,
+  currentWeapon: {fileID: 3912343365788612195, guid: f96dd3226aa2e0c4193853be11405d44,
     type: 3}
+  playerCamera: {fileID: 330585545}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
