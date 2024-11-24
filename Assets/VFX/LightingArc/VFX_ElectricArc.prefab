@@ -311,6 +311,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b56acdc184f13489ecce7dc787f3dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointOne: {fileID: 1715762775011524474}
+  pointTwo: {fileID: 6941067016367153522}
+  pointThree: {fileID: 8629496365003750274}
+  pointFour: {fileID: 8614892610186102007}
+  time: 0.4
 --- !u!1 &6941067016367153522
 GameObject:
   m_ObjectHideFlags: 0

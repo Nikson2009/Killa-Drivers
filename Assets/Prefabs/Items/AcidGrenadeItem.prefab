@@ -48,3 +48,4 @@ MonoBehaviour:
     type: 3}
   spawnDistance: 1.5
   spawnForce: 725
+  damage: 30

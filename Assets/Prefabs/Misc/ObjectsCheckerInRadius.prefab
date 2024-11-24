@@ -45,4 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsCheckerLink: {fileID: 5109641386466705746}
-  triggerRadius: 4
+  vfxWithCurve: {fileID: 3165194164159787716, guid: 99cbba602aaeee647b381d57b6aa069a,
+    type: 3}
+  triggerRadius: 6
