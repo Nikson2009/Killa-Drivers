@@ -6,6 +6,7 @@ public class CheckObjectsInRadiusWithVFX : MonoBehaviour
 {
     [Header("Links")]
     [SerializeField] GameObject objectsCheckerLink;
+    [SerializeField] GameObject vfxWithCurve;
 
     [Header("Parameters")]
     [SerializeField] float triggerRadius = 1f;
@@ -23,6 +24,8 @@ public class CheckObjectsInRadiusWithVFX : MonoBehaviour
 
                 if (checkingObject != excludedObject)
                 {
+                    GameObject newVfx = Instantiate(vfxWithCurve, Vector3.zero, Quaternion.identity);
+
                     returnedObjects.Add(checkingObject);
                 }
             }
