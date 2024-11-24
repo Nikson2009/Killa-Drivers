@@ -21,7 +21,7 @@ public class LazerGunItem : WeaponItemClass
         {
             GameObject newObjectChecker = Instantiate(objectCheckerLink, hit.collider.gameObject.transform.position, Quaternion.identity);
             CheckObjectsInRadius objectCheckerScript = newObjectChecker.GetComponent<CheckObjectsInRadius>();
-            List<GameObject> enemiesToDamage/* = objectCheckerScript.getObjectsInRadius(maxDamagedEnemies, 0, hit.collider.gameObject)*/ = new List<GameObject>();
+            List<GameObject> enemiesToDamage = objectCheckerScript.getObjectsInRadius(maxDamagedEnemies, 0, hit.collider.gameObject);
             enemiesToDamage.Add(hit.collider.gameObject);
 
             foreach (GameObject enemy in enemiesToDamage)
