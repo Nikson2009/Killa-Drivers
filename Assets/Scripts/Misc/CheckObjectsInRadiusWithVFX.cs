@@ -28,28 +28,20 @@ public class CheckObjectsInRadiusWithVFX : MonoBehaviour
 
                     VFXCurveManager vfxCurveScript = newVfx.GetComponent<VFXCurveManager>();
 
-<<<<<<< HEAD
-                    Vector3 centerPoint = transform.position + (checkingObject.transform.position - transform.position) / 2;
-
-                    newVfx.transform.position = centerPoint;
-
-                    vfxCurveScript.SetCurvePoints(transform.position, centerPoint, centerPoint, checkingObject.transform.position);
-=======
                     vfxCurveScript.SetCurvePoints(transform.position, new Vector3(), new Vector3(), checkingObject.transform.position);
->>>>>>> 51ed2346ba37ea7260f828bab1b952bb46dd4caf
                     vfxCurveScript.StartTimerToDestroy();
 
                     returnedObjects.Add(checkingObject);
                 }
             }
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
 
             return returnedObjects;
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
 
             return null;
         }

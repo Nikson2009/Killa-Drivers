@@ -46,8 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectCheckerLink: {fileID: 5109641386466705746, guid: 04363a0f266da0d4c8719d902b830d50,
     type: 3}
-  floatingTextLink: {fileID: 1871971930043335055, guid: 2b971b18ece531941a5d6a39139ddd36,
-    type: 3}
   maxDistanceToHit: 500
   maxDamagedEnemies: 4
-  damage: 10
+  damage: 1
