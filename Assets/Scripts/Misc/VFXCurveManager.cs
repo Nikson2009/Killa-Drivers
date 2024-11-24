@@ -22,13 +22,13 @@ public class VFXCurveManager : MonoBehaviour
     }
     public void StartTimerToDestroy()
     {
-        TimerToDestroy();
+        StartCoroutine(TimerToDestroy());
     }
 
     IEnumerator TimerToDestroy()
     {
         yield return new WaitForSeconds(time);
 
-        Destroy(gameObject);
+        Destroy(transform.gameObject);
     }
 }
