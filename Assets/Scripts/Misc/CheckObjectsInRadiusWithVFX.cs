@@ -26,6 +26,11 @@ public class CheckObjectsInRadiusWithVFX : MonoBehaviour
                 {
                     GameObject newVfx = Instantiate(vfxWithCurve, Vector3.zero, Quaternion.identity);
 
+                    VFXCurveManager vfxCurveScript = newVfx.GetComponent<VFXCurveManager>();
+
+                    vfxCurveScript.SetCurvePoints(transform.position, Vector3.new(), Vector3.new(), checkingObject.transform.position);
+                    vfxCurveScript.StartTimerToDestroy();
+
                     returnedObjects.Add(checkingObject);
                 }
             }
