@@ -733,6 +733,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &1482118558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,6 +751,8 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: e1b3f80093cafc243a36009615263aa3, type: 2}
+=======
+>>>>>>> parent of d615b0f (-)
 --- !u!1 &1780747808
 GameObject:
   m_ObjectHideFlags: 0
@@ -5850,3 +5853,7 @@ SceneRoots:
   - {fileID: 134174697}
   - {fileID: 796375952}
   - {fileID: 1469014693}
+<<<<<<< HEAD
+=======
+  - {fileID: 1967059128}
+>>>>>>> parent of d615b0f (-)
