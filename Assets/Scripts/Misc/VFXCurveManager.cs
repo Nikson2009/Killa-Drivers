@@ -22,7 +22,7 @@ public class VFXCurveManager : MonoBehaviour
     }
     public void StartTimerToDestroy()
     {
-        TimerToDestroy();
+        StartCoroutine(TimerToDestroy());
     }
 
     IEnumerator TimerToDestroy()
