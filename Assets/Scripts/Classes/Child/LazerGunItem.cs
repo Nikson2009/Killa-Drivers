@@ -11,6 +11,8 @@ public class LazerGunItem : WeaponItemClass
     [Header("Parameters")]
     [SerializeField] float maxDistanceToHit = 500f;
     [SerializeField] int maxDamagedEnemies = 4;
+    [SerializeField] int damage = 5;
+    [SerializeField] int damageRandomness = 2;
     public override void UseWeapon(Camera playerCamera)
     {
         Vector3 rayOrigin = playerCamera.transform.position;
