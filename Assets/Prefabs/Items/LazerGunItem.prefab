@@ -50,5 +50,5 @@ MonoBehaviour:
     type: 3}
   maxDistanceToHit: 500
   maxDamagedEnemies: 4
-  damage: 1
+  damage: 5
   damageRandomness: 2

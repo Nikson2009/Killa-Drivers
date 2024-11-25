@@ -34,16 +34,11 @@ public class LazerGunItem : WeaponItemClass
 
                     int damageResult = damage + Random.RandomRange(-damageRandomness, damageRandomness);
 
-                    SpawnDamageText(enemy.transform.position, damageResult);
+                    Entity entityScript = enemy.GetComponent<Entity>();
+
+                    entityScript.ApplyDamage(damageResult);
                 }
             }
         }
-    }
-
-    private void SpawnDamageText(Vector3 spawnPos, int damageResult)
-    {
-        GameObject newFloatingText = Instantiate(floatingTextLink, spawnPos, Quaternion.identity);
-        FloatingTextManager floatingTextScript = newFloatingText.GetComponent<FloatingTextManager>();
-        floatingTextScript.SetText(damageResult.ToString());
     }
 }

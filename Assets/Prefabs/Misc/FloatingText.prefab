@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2377292256452460177}
   - component: {fileID: 3032763240001718313}
   - component: {fileID: 8515288731934429086}
+  - component: {fileID: 8166512222493217230}
   m_Layer: 0
   m_Name: FloatingText
   m_TagString: Untagged
@@ -114,3 +115,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMeshLink: {fileID: 3032763240001718313}
+  timeToDestroy: 1
+  offset: {x: 0, y: 3, z: 0}
+--- !u!95 &8166512222493217230
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874389639215065602}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e5b8e232cc0f2c4c8ba62e761c0073d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
