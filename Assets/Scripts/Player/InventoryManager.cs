@@ -19,7 +19,7 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             WeaponItemClass currentWeaponScript = inventoryItems[0].GetComponent<WeaponItemClass>();
             currentWeaponScript.UseWeapon(playerCamera);

@@ -93,15 +93,15 @@ TextMesh:
   m_CharacterSize: 1
   m_LineSpacing: 1
   m_Anchor: 1
-  m_Alignment: 0
+  m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 50
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4279440383
 --- !u!114 &8515288731934429086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +117,7 @@ MonoBehaviour:
   textMeshLink: {fileID: 3032763240001718313}
   timeToDestroy: 1
   offset: {x: 0, y: 3, z: 0}
+  randomizeIntensity: {x: 0.5, y: 0.25, z: 0.25}
 --- !u!95 &8166512222493217230
 Animator:
   serializedVersion: 5
