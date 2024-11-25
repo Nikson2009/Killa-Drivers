@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class ExplosionDamage : MonoBehaviour
 {
-    public GameObject explosionVFX;
-    public float timer;
-    void Start()
-    {
-        StartCoroutine(Explosion());
-    }
+    [Header("Links")]
+    [SerializeField] GameObject explosionVFXLink;
+    [SerializeField] GameObject objectCheckerLink;
+    [SerializeField] GameObject floatingTextLink;
 
+    [Header("Parameters")]
+    [SerializeField] float timer;
 
-    IEnumerator Explosion()
+    IEnumerator Explosion(int damage, int damageRandomness)
     {
         yield return new WaitForSeconds(timer);
 
         Destroy(gameObject);
 
-        Instantiate(explosionVFX, transform.position, Quaternion.identity);
+        Instantiate(explosionVFXLink, transform.position, Quaternion.identity);
     }
 }

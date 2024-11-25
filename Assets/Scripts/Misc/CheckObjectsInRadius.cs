@@ -9,7 +9,7 @@ public class CheckObjectsInRadius : MonoBehaviour
 
     [Header("Parameters")]
     [SerializeField] float triggerRadius = 1f;
-    
+
     public List<GameObject> getObjectsInRadius(int maxCheckedObjects, int checkedObjectsCount, GameObject excludedObject)
     {
         Collider[] overlappingColliders = Physics.OverlapSphere(transform.position, triggerRadius);
@@ -18,7 +18,8 @@ public class CheckObjectsInRadius : MonoBehaviour
         {
             List<GameObject> returnedObjects = new List<GameObject>();
 
-            foreach (Collider collider in overlappingColliders){
+            foreach (Collider collider in overlappingColliders)
+            {
                 GameObject checkingObject = collider.gameObject;
 
                 if (checkingObject != excludedObject)
