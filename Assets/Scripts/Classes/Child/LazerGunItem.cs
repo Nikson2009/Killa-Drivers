@@ -24,7 +24,7 @@ public class LazerGunItem : WeaponItemClass
         if (Physics.Raycast(rayOrigin, rayDirection, out hit, maxDistanceToHit))
         {
             GameObject shootVfx = Instantiate(shootVfxLink, playerCamera.transform.position + new Vector3(0, -2, 0), Quaternion.identity);
-            shootVfx.transform.LookAt(hit.transform.position);
+            shootVfx.transform.LookAt(hit.point);
 
             GameObject newObjectChecker = Instantiate(objectCheckerLink, hit.collider.gameObject.transform.position, Quaternion.identity);
             CheckObjectsInRadiusWithVFX objectCheckerScript = newObjectChecker.GetComponent<CheckObjectsInRadiusWithVFX>();
