@@ -224,6 +224,7 @@ MonoBehaviour:
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
   timer: 1.5
+  force: 100
 --- !u!54 &8991376058941066869
 Rigidbody:
   m_ObjectHideFlags: 0

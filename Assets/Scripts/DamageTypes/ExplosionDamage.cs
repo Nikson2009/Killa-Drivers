@@ -11,6 +11,7 @@ public class ExplosionDamage : MonoBehaviour
 
     [Header("Parameters")]
     [SerializeField] float timer;
+    [SerializeField] float force;
 
     public void StartExplosion(int damage, int damageRandomness)
     {
@@ -38,6 +39,12 @@ public class ExplosionDamage : MonoBehaviour
                 Entity entityScript = enemy.GetComponent<Entity>();
                 int damageResult = damage + Random.RandomRange(-damageRandomness, damageRandomness);
                 entityScript.ApplyDamage(damageResult);
+
+                if (enemy.tag != "Player")
+                {
+                    Rigidbody enemyRigidbody = enemy.GetComponent<Rigidbody>();
+                    enemyRigidbody.AddForce((enemy.transform.position - transform.position).normalized * force, ForceMode.Force);
+                }
             }
         }
     }

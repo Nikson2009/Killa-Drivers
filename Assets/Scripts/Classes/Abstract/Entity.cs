@@ -4,6 +4,9 @@ using UnityEngine;
 
 public abstract class Entity : MonoBehaviour
 {
+    [Header("Links")]
+    [SerializeField] GameObject playerObject;
+
     [Header("Parameters")]
     [SerializeField] protected int maxHealth = 100;
 
@@ -13,6 +16,16 @@ public abstract class Entity : MonoBehaviour
         this.currentHealth = maxHealth;
 
         SetUniqueStats();
+    }
+
+    void Update()
+    {
+
+    }
+
+    private void AI()
+    {
+        
     }
 
     abstract public void ApplyDamage(int damage);
