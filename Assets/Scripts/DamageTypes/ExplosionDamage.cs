@@ -12,6 +12,11 @@ public class ExplosionDamage : MonoBehaviour
     [Header("Parameters")]
     [SerializeField] float timer;
 
+    public void StartExplosion(int damage, int damageRandomness)
+    {
+        StartCoroutine(Explosion(damage, damageRandomness));
+    }
+
     IEnumerator Explosion(int damage, int damageRandomness)
     {
         yield return new WaitForSeconds(timer);
@@ -19,5 +24,21 @@ public class ExplosionDamage : MonoBehaviour
         Destroy(gameObject);
 
         Instantiate(explosionVFXLink, transform.position, Quaternion.identity);
+
+        GameObject newObjectChecker = Instantiate(objectCheckerLink, transform.position, Quaternion.identity);
+
+        CheckObjectsInRadius objectCheckerScript = newObjectChecker.GetComponent<CheckObjectsInRadius>();
+
+        List<GameObject> damagedEnemies = objectCheckerScript.getObjectsInRadius(100, 0, null);
+
+        foreach (GameObject enemy in damagedEnemies)
+        {
+            if (enemy.tag == "Enemy" || enemy.tag == "Player")
+            {
+                Entity entityScript = enemy.GetComponent<Entity>();
+                int damageResult = damage + Random.RandomRange(-damageRandomness, damageRandomness);
+                entityScript.ApplyDamage(damageResult);
+            }
+        }
     }
 }

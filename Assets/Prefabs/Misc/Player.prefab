@@ -127,8 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 3596720226559018027}
-  sensetivityX: 250
-  sensetivityY: 250
+  sensetivityX: 195
+  sensetivityY: 195
 --- !u!54 &8681585355439926231
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -195,9 +195,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 35800548428671603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c51122331845a74792e4d90e7495b11, type: 3}
+  m_Script: {fileID: 11500000, guid: 055287d165dea2d479e2e487f93b7c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1 &2611349203683447106
 GameObject:
   m_ObjectHideFlags: 0

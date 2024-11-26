@@ -47,4 +47,6 @@ MonoBehaviour:
   grenadeLink: {fileID: 3912343365788612195, guid: f96dd3226aa2e0c4193853be11405d44,
     type: 3}
   spawnDistance: 1.5
-  spawnForce: 725
+  spawnForce: 1450
+  damage: 30
+  damageRandomness: 3

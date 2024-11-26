@@ -28,10 +28,8 @@ public class LazerGunItem : WeaponItemClass
 
             foreach (GameObject enemy in enemiesToDamage)
             {
-                if (enemy.tag == "Enemy")
+                if (enemy.tag == "Enemy" || enemy.tag == "Player")
                 {
-                    enemy.GetComponent<MeshRenderer>().material.color = Color.yellow;
-
                     int damageResult = damage + Random.RandomRange(-damageRandomness, damageRandomness);
 
                     Entity entityScript = enemy.GetComponent<Entity>();

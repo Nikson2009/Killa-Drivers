@@ -240,10 +240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &35344114
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,10 +362,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &98319077
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,10 +484,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!20 &330585545 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 3596720226559018027, guid: 28b89f64bd31c2a459a783af46f8005b,
@@ -612,10 +612,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &356975831
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,10 +734,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &380414373
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,10 +856,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &382301966
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,10 +978,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,10 +1218,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &467483831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,10 +1340,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &556199032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,10 +1462,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &618782227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,10 +1584,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &653801062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,10 +1706,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &727710445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1828,10 +1828,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &802653146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,10 +1950,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,10 +2121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &989260691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2243,10 +2243,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &1139383776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,10 +2365,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &1170862507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2487,10 +2487,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &1179538933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2609,10 +2609,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &1188768230
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,10 +2731,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &1353916180
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,10 +2853,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &1369888642
 GameObject:
   m_ObjectHideFlags: 0
@@ -2975,10 +2975,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &1514702900
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,10 +3097,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &1692797194
 GameObject:
   m_ObjectHideFlags: 0
@@ -3219,10 +3219,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &1698111284
 GameObject:
   m_ObjectHideFlags: 0
@@ -3341,10 +3341,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &1742375620
 GameObject:
   m_ObjectHideFlags: 0
@@ -3463,10 +3463,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &1993235066
 GameObject:
   m_ObjectHideFlags: 0
@@ -3585,10 +3585,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1 &2009211736
 GameObject:
   m_ObjectHideFlags: 0
@@ -3707,10 +3707,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94441b451091bf41a4610f3ed141e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   mainCamera: {fileID: 330585545}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  maxHealth: 100
 --- !u!1001 &7010051166870736937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3722,6 +3722,11 @@ PrefabInstance:
     - target: {fileID: 35800548428671603, guid: 28b89f64bd31c2a459a783af46f8005b,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 35800548428671603, guid: 28b89f64bd31c2a459a783af46f8005b,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2275877954425615602, guid: 28b89f64bd31c2a459a783af46f8005b,
@@ -3774,6 +3779,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4801307443528521684, guid: 28b89f64bd31c2a459a783af46f8005b,
+        type: 3}
+      propertyPath: maxStamina
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4801307443528521684, guid: 28b89f64bd31c2a459a783af46f8005b,
+        type: 3}
+      propertyPath: maxOxygenLevel
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042499963921024980, guid: 28b89f64bd31c2a459a783af46f8005b,
+        type: 3}
+      propertyPath: startWeaponLink
+      value: 
+      objectReference: {fileID: 1239394281963886326, guid: e6bfd956b172340439100a69f33dadce,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
