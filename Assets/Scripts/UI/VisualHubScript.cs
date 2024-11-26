@@ -6,18 +6,23 @@ using TMPro;
 
 public class VisualHubScript : MonoBehaviour
 {
+    private int PlayerMaxHealth = 100;
     [Header("Ui instances")]
     [SerializeField] TextMeshProUGUI Health_Text;
     [Header("Other scripts instances")]
     [SerializeField] Player PlayerScript; //mb change to another with void damage received
+    private void Start()
+    {
+        PlayerMaxHealth = PlayerScript.GetCurrentMaxHealth();
+    }
 
     private void Update()
     {
         int curentHp = PlayerScript.GetCurrentHealth();
-        Health_Text.text = curentHp + "%";
+        Health_Text.text = (curentHp/PlayerMaxHealth)*100 + "%";
         Color first;
-        first = new Color((float)(100 - curentHp) / 100, 1, 1);
-        Color second = new Color((float)(100 - curentHp) / 100, (float) curentHp/100, (float)curentHp/100);
+        first = new Color((float)(PlayerMaxHealth - curentHp) / 100, 1, 1);
+        Color second = new Color((float)(PlayerMaxHealth - curentHp) / PlayerMaxHealth, (float) curentHp/ PlayerMaxHealth, (float)curentHp/ PlayerMaxHealth);
         Health_Text.colorGradient = new VertexGradient(first,first, second,second);
     }
 }

@@ -35,4 +35,8 @@ public class Player : Entity
     {
         return this.currentHealth;
     }
+    public int GetCurrentMaxHealth()
+    {
+        return this.maxHealth;
+    }
 }
