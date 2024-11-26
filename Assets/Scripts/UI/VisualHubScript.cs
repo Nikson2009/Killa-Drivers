@@ -13,9 +13,11 @@ public class VisualHubScript : MonoBehaviour
 
     private void Update()
     {
-        //Health_Text.text = PlayerScript.GetCurrentHealth() + "%";
-        Color first = new Color(1, 1, 1);
-        Color second = new Color(1, 1, 1);
+        int curentHp = PlayerScript.GetCurrentHealth();
+        Health_Text.text = curentHp + "%";
+        Color first;
+        first = new Color((float)(100 - curentHp) / 100, 1, 1);
+        Color second = new Color((float)(100 - curentHp) / 100, (float) curentHp/100, (float)curentHp/100);
         Health_Text.colorGradient = new VertexGradient(first,first, second,second);
     }
 }
