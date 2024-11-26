@@ -48,6 +48,8 @@ MonoBehaviour:
     type: 3}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
+  shootVfxLink: {fileID: 4095732826809439606, guid: de2774f36a564254b83231d24e8036c7,
+    type: 3}
   maxDistanceToHit: 500
   maxDamagedEnemies: 4
   damage: 5
