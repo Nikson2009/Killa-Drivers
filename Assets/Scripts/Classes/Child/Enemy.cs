@@ -7,6 +7,7 @@ public class Enemy : Entity
     [Header("Links")]
     [SerializeField] Camera mainCamera;
     [SerializeField] GameObject floatingTextLink;
+    [SerializeField] GameObject weaponLink;
 
     public override void ApplyDamage(int damage)
     {
