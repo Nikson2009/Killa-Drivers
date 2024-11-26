@@ -30,4 +30,9 @@ public class Player : Entity
             Destroy(transform.gameObject);
         }
     }
+
+    public int GetCurrentHealth()
+    {
+        return this.currentHealth;
+    }
 }
