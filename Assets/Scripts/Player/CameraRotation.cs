@@ -11,12 +11,17 @@ public class CameraRotation : MonoBehaviour
     float xRotation;
     float yRotation;
 
-    public float sensetivityX;
-    public float sensetivityY;
+    [SerializeField] float sensetivityX;
+    [SerializeField] float sensetivityY;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        //Set up sensitive
+        float curentSensitive = PlayerPrefs.GetFloat("Sensitive");
+        sensetivityX = curentSensitive;
+        sensetivityY = curentSensitive;
     }
 
     private void Update()
