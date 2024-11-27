@@ -9,8 +9,8 @@ public class VisualHubScript : MonoBehaviour
     private List<int> MaxParams = new List<int>();
     [Header("Ui instances")]
     [SerializeField] TextMeshProUGUI Health_Text;
-    [SerializeField] TextMeshProUGUI Oxygen_Text;
-    [SerializeField] TextMeshProUGUI Stamina_Text;
+    [SerializeField] Slider Oxygen_Slider;
+    [SerializeField] Slider Stamina_Slider;
     [Header("Other scripts instances")]
     [SerializeField] Player PlayerScript; //mb change to another with void damage received
     private void Start()
@@ -32,8 +32,8 @@ public class VisualHubScript : MonoBehaviour
 
         //Changing Variable text
         Health_Text.text = curentHpProc*100 + "%";
-        Oxygen_Text.text = curentOxygenProc * 100 + "%";
-        Stamina_Text.text = curentStaminaProc*100 + "%";
+        Oxygen_Slider.value  = 1-curentOxygenProc;
+        Stamina_Slider.value = 1-curentStaminaProc;
 
         //Creating Gradient
         Color first = new Color((float)(MaxParams[0] - curentHp) / 100, 1, 1);
