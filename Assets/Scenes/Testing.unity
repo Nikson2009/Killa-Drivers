@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aa7c6ffab49e7e4795681adc0a33961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health_Slider: {fileID: 0}
+  Health_Slider: {fileID: 1976652902}
   Oxygen_Slider: {fileID: 445024513}
   Stamina_Slider: {fileID: 155722097}
   PlayerScript: {fileID: 1251067259}
