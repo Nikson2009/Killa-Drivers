@@ -127,19 +127,20 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  weaponLink: {fileID: 1239394281963886326, guid: e6bfd956b172340439100a69f33dadce,
+  weaponLink: {fileID: 2259368610159976053, guid: d5c49b9175b430045b2dc9f1c181355e,
     type: 3}
   playerTransform: {fileID: 0}
   agent: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
+  walkPoint: {x: 0, y: 0, z: 0}
   attackCooldown: 1
-  sightRange: 50
-  attackRange: 120
+  sightRange: 15
+  attackRange: 10
   playerIsInSightRange: 0
   playerIsInAttackRange: 0
 --- !u!54 &2997052835332781375

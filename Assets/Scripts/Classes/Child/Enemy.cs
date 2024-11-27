@@ -15,7 +15,7 @@ public class Enemy : Entity
     [Header("Misc")]
     [SerializeField] LayerMask whatIsGround, whatIsPlayer;
 
-    Vector3 walkPoint;
+    [SerializeField] Vector3 walkPoint;
     bool walkPointSet;
     float walkPointRange;
 
@@ -26,6 +26,9 @@ public class Enemy : Entity
 
     bool alreadyAttacked;
     WeaponItemClass weaponScript;
+    Rigidbody rb;
+
+    GameObject currentWeapon;
 
     public override void ApplyDamage(int damage)
     {
@@ -40,8 +43,12 @@ public class Enemy : Entity
     }
 
     protected override void SetUniqueStats() {
+        currentWeapon = Instantiate(weaponLink, Vector3.zero, Quaternion.identity);
+
         playerTransform = GameObject.Find("Player").transform;
+        weaponScript = currentWeapon.GetComponent<WeaponItemClass>();
         agent = GetComponent<NavMeshAgent>();
+        rb = GetComponent<Rigidbody>();
     }
     private void ShowFloatingText(Vector3 position, string text)
     {
@@ -87,13 +94,23 @@ public class Enemy : Entity
 
     private void ChasePlayer()
     {
-
+        rb.AddForce((playerTransform.position - transform.position).normalized * 100f, ForceMode.Force);
     }
 
     private void AttackPlayer()
     {
         transform.LookAt(playerTransform);
 
-        weaponScript.UseWeapon(transform);
+        if (!alreadyAttacked)
+        {
+            alreadyAttacked = true;
+            weaponScript.UseWeapon(transform);
+            Invoke(nameof(ResetAttack), attackCooldown);
+        }
+    }
+
+    private void ResetAttack()
+    {
+        alreadyAttacked = false;
     }
 }
