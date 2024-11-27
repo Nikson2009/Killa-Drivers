@@ -6,23 +6,28 @@ using TMPro;
 
 public class VisualHubScript : MonoBehaviour
 {
-    [SerializeField]private int PlayerMaxHealth = 100;
+    [SerializeField] Dictionary<string,int> MaxParams;
     [Header("Ui instances")]
     [SerializeField] TextMeshProUGUI Health_Text;
     [Header("Other scripts instances")]
     [SerializeField] Player PlayerScript; //mb change to another with void damage received
     private void Start()
     {
-        PlayerMaxHealth = PlayerScript.GetCurrentMaxHealth();
+        List<int> Max = PlayerScript.GetMaxParameters();
+        print(Max[0]);
+        MaxParams.Add("maxHealth", Max[0]);
+        MaxParams.Add("maxOxygenLevel", Max[1]);
+        MaxParams.Add("maxStamina", Max[2]);
     }
 
     private void Update()
     {
         int curentHp = PlayerScript.GetCurrentHealth();
-        Health_Text.text = ((float)curentHp / (float)PlayerMaxHealth)*100 + "%";
-        Color first;
-        first = new Color((float)(PlayerMaxHealth - curentHp) / 100, 1, 1);
-        Color second = new Color((float)(PlayerMaxHealth - curentHp) / PlayerMaxHealth, (float) curentHp/ PlayerMaxHealth, (float)curentHp/ PlayerMaxHealth);
+        float curentHpInProc = curentHp / MaxParams["maxHealth"];
+        print(curentHpInProc);
+        Health_Text.text = ((float)curentHp / (float)MaxParams["maxHealth"])*100 + "%";
+        Color first = new Color((float)(MaxParams["maxHealth"] - curentHp) / 100, 1, 1);
+        Color second = new Color((float)(MaxParams["maxHealth"] - curentHp) / MaxParams["maxHealth"], (float) curentHp/ MaxParams["maxHealth"], (float)curentHp/ MaxParams["maxHealth"]);
         Health_Text.colorGradient = new VertexGradient(first,first, second,second);
     }
 }

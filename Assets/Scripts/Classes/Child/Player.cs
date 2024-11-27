@@ -31,12 +31,13 @@ public class Player : Entity
         }
     }
 
-    public int GetCurrentHealth()
+    // GetCurent... Events
+    public int GetCurrentHealth(){return this.currentHealth;}
+    public int GetCurrentStamina() { return this.currentHealth; }
+    public int GetCurrentOxygenLevel() { return this.currentHealth; }
+    // GetMax... Events
+    public List<int> GetMaxParameters()
     {
-        return this.currentHealth;
-    }
-    public int GetCurrentMaxHealth()
-    {
-        return this.maxHealth;
+        return new List<int> { this.maxHealth, maxOxygenLevel, maxStamina };
     }
 }
