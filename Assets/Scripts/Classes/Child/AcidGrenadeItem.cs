@@ -12,10 +12,10 @@ public class AcidGrenadeItem : WeaponItemClass
     [SerializeField] float spawnForce = 725f;
     [SerializeField] int damage = 1;
     [SerializeField] int damageRandomness = 1;
-    public override void UseWeapon(Camera playerCamera)
+    public override void UseWeapon(Transform viewTransform)
     {
-        GameObject weaponResult = Instantiate(grenadeLink, playerCamera.transform.position + playerCamera.transform.forward * spawnDistance, Quaternion.identity);
-        weaponResult.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * spawnForce, ForceMode.Force);
+        GameObject weaponResult = Instantiate(grenadeLink, viewTransform.position + viewTransform.forward * spawnDistance, Quaternion.identity);
+        weaponResult.GetComponent<Rigidbody>().AddForce(viewTransform.forward * spawnForce, ForceMode.Force);
         ExplosionDamage weaponScript = weaponResult.GetComponent<ExplosionDamage>();
         weaponScript.StartExplosion(damage, damageRandomness);
     }

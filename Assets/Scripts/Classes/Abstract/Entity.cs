@@ -11,21 +11,11 @@ public abstract class Entity : MonoBehaviour
     [SerializeField] protected int maxHealth = 100;
 
     protected int currentHealth;
-    void Start()
+    void Awake()
     {
         this.currentHealth = maxHealth;
 
         SetUniqueStats();
-    }
-
-    void Update()
-    {
-
-    }
-
-    private void AI()
-    {
-        
     }
 
     abstract public void ApplyDamage(int damage);
