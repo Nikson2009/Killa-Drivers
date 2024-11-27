@@ -6,28 +6,33 @@ using TMPro;
 
 public class VisualHubScript : MonoBehaviour
 {
-    [SerializeField] Dictionary<string,int> MaxParams;
+    private List<int> MaxParams = new List<int>();
     [Header("Ui instances")]
     [SerializeField] TextMeshProUGUI Health_Text;
+    [SerializeField] TextMeshProUGUI Oxygen_Text;
+    [SerializeField] TextMeshProUGUI Stamina_Text;
     [Header("Other scripts instances")]
     [SerializeField] Player PlayerScript; //mb change to another with void damage received
     private void Start()
     {
-        List<int> Max = PlayerScript.GetMaxParameters();
-        print(Max[0]);
-        MaxParams.Add("maxHealth", Max[0]);
-        MaxParams.Add("maxOxygenLevel", Max[1]);
-        MaxParams.Add("maxStamina", Max[2]);
+        MaxParams = PlayerScript.GetMaxParameters();//0 MaxHealth,1 Max oxygen,2 MaxStamina
     }
 
     private void Update()
     {
         int curentHp = PlayerScript.GetCurrentHealth();
-        float curentHpInProc = curentHp / MaxParams["maxHealth"];
-        print(curentHpInProc);
-        Health_Text.text = ((float)curentHp / (float)MaxParams["maxHealth"])*100 + "%";
-        Color first = new Color((float)(MaxParams["maxHealth"] - curentHp) / 100, 1, 1);
-        Color second = new Color((float)(MaxParams["maxHealth"] - curentHp) / MaxParams["maxHealth"], (float) curentHp/ MaxParams["maxHealth"], (float)curentHp/ MaxParams["maxHealth"]);
+        int curentOxygen = PlayerScript.GetCurrentOxygenLevel();
+        int curentStamina = PlayerScript.GetCurrentStamina();
+
+        float curentHpInProc = curentHp / MaxParams[0];
+        //Changing Variable text
+        Health_Text.text = curentHpInProc*100 + "%";
+        //Health_Text.text = curentHpInProc * 100 + "%";
+        //Health_Text.text = curentHpInProc * 100 + "%";
+
+        //Creating Gradient
+        Color first = new Color((float)(MaxParams[0] - curentHp) / 100, 1, 1);
+        Color second = new Color((float)(MaxParams[0] - curentHp) / MaxParams[0], curentHpInProc, curentHpInProc);
         Health_Text.colorGradient = new VertexGradient(first,first, second,second);
     }
 }
