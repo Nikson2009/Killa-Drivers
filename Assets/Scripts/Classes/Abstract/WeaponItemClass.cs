@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class WeaponItemClass : MonoBehaviour
 {
-   public abstract void UseWeapon(Camera playerCamera);
+   public abstract void UseWeapon(Transform viewTransform);
 }

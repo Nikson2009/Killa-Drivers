@@ -14,16 +14,16 @@ public class LazerGunItem : WeaponItemClass
     [SerializeField] int maxDamagedEnemies = 4;
     [SerializeField] int damage = 5;
     [SerializeField] int damageRandomness = 2;
-    public override void UseWeapon(Camera playerCamera)
+    public override void UseWeapon(Transform viewTransform)
     {
 
-        Vector3 rayOrigin = playerCamera.transform.position;
-        Vector3 rayDirection = playerCamera.transform.forward;
+        Vector3 rayOrigin = viewTransform.position;
+        Vector3 rayDirection = viewTransform.forward;
 
         RaycastHit hit;
         if (Physics.Raycast(rayOrigin, rayDirection, out hit, maxDistanceToHit))
         {
-            GameObject shootVfx = Instantiate(shootVfxLink, playerCamera.transform.position + new Vector3(0, -2, 0), Quaternion.identity);
+            GameObject shootVfx = Instantiate(shootVfxLink, viewTransform.position + new Vector3(0, -2, 0), Quaternion.identity);
             shootVfx.transform.LookAt(hit.point);
 
             GameObject newObjectChecker = Instantiate(objectCheckerLink, hit.collider.gameObject.transform.position, Quaternion.identity);
@@ -44,7 +44,7 @@ public class LazerGunItem : WeaponItemClass
             }
         } else
         {
-            GameObject shootVfx = Instantiate(shootVfxLink, playerCamera.transform.position + new Vector3(0, -2, 0), playerCamera.transform.rotation);
+            Instantiate(shootVfxLink, viewTransform.position + new Vector3(0, -2, 0), viewTransform.rotation);
         }
     }
 }
