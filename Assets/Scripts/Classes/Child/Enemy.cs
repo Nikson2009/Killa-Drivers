@@ -15,6 +15,10 @@ public class Enemy : Entity
     [Header("Misc")]
     [SerializeField] LayerMask whatIsGround, whatIsPlayer;
 
+    Vector3 walkPoint;
+    bool walkPointSet;
+    float walkPointRange;
+
     [Header("Parameters")]
     [SerializeField] float attackCooldown;
     [SerializeField] float sightRange, attackRange;
@@ -59,7 +63,26 @@ public class Enemy : Entity
 
     private void Patroling()
     {
+        if (!walkPointSet) SearchWalkPoint();
 
+        if (walkPointSet) {
+            agent.SetDestination(walkPoint);
+        }
+
+        Vector3 distanceToWalkPoint = transform.position - walkPoint;
+
+        if (distanceToWalkPoint.magnitude < 1f) walkPointSet = false;
+    }
+
+    private void SearchWalkPoint()
+    {
+        float randomZ = Random.Range(-walkPointRange, walkPointRange);
+        float randomX = Random.Range(-walkPointRange, walkPointRange);
+        float randomY = Random.Range(-walkPointRange, walkPointRange);
+
+        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y + randomY, transform.position.z + randomZ);
+
+        if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround)) walkPointSet = true;
     }
 
     private void ChasePlayer()
@@ -69,8 +92,6 @@ public class Enemy : Entity
 
     private void AttackPlayer()
     {
-        print("Hui");
-
         transform.LookAt(playerTransform);
 
         weaponScript.UseWeapon(transform);
