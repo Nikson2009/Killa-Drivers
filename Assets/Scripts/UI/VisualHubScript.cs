@@ -26,9 +26,9 @@ public class VisualHubScript : MonoBehaviour
         int curentStamina = PlayerScript.GetCurrentStamina();
 
         //Curent Variables in procents
-        float curentHpProc = curentHp / MaxParams[0];
-        float curentOxygenProc = curentOxygen / MaxParams[1];
-        float curentStaminaProc = curentStamina / MaxParams[2];
+        float curentHpProc = (float)curentHp / MaxParams[0];
+        float curentOxygenProc = (float)curentOxygen / MaxParams[1];
+        float curentStaminaProc = (float)curentStamina / MaxParams[2];
 
         //Changing Variable text
         Health_Text.text = curentHpProc*100 + "%";
