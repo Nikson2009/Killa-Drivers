@@ -13,11 +13,11 @@ public class VisualHubScript : MonoBehaviour
     [SerializeField] Player PlayerScript; //mb change to another with void damage received
     private void Start()
     {
-        int[] Max = PlayerScript.GetMaxParameters();
-        print(Max[1]);
-        MaxParams.Add("maxHealth", Max[1]);
-        MaxParams.Add("maxOxygenLevel", Max[2]);
-        MaxParams.Add("maxStamina", Max[3]);
+        List<int> Max = PlayerScript.GetMaxParameters();
+        print(Max[0]);
+        MaxParams.Add("maxHealth", Max[0]);
+        MaxParams.Add("maxOxygenLevel", Max[1]);
+        MaxParams.Add("maxStamina", Max[2]);
     }
 
     private void Update()

@@ -36,8 +36,8 @@ public class Player : Entity
     public int GetCurrentStamina() { return this.currentHealth; }
     public int GetCurrentOxygenLevel() { return this.currentHealth; }
     // GetMax... Events
-    public int[] GetMaxParameters()
+    public List<int> GetMaxParameters()
     {
-        return new int[]{this.maxHealth, maxOxygenLevel, maxStamina};
+        return new List<int> { this.maxHealth, maxOxygenLevel, maxStamina };
     }
 }
