@@ -69,6 +69,10 @@ public class Enemy : Entity
 
     private void AttackPlayer()
     {
+        print("Hui");
+
+        transform.LookAt(playerTransform);
+
         weaponScript.UseWeapon(transform);
     }
 }
