@@ -8,7 +8,7 @@ public class VisualHubScript : MonoBehaviour
 {
     private List<int> MaxParams = new List<int>();
     [Header("Ui instances")]
-    [SerializeField] TextMeshProUGUI Health_Text;
+    [SerializeField] Slider Health_Slider;
     [SerializeField] Slider Oxygen_Slider;
     [SerializeField] Slider Stamina_Slider;
     [Header("Other scripts instances")]
@@ -31,13 +31,8 @@ public class VisualHubScript : MonoBehaviour
         float curentStaminaProc = (float)curentStamina / MaxParams[2];
 
         //Changing Variable text
-        Health_Text.text = curentHpProc*100 + "%";
+        Oxygen_Slider.value  = 1-curentHpProc;
         Oxygen_Slider.value  = 1-curentOxygenProc;
         Stamina_Slider.value = 1-curentStaminaProc;
-
-        //Creating Gradient
-        Color first = new Color((float)(MaxParams[0] - curentHp) / 100, 1, 1);
-        Color second = new Color((float)(MaxParams[0] - curentHp) / MaxParams[0], curentHpProc, curentHpProc);
-        Health_Text.colorGradient = new VertexGradient(first,first, second,second);
     }
 }
