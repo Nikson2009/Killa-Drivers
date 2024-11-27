@@ -471,6 +471,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health_Text: {fileID: 1762712122}
+  Oxygen_Text: {fileID: 1242488005}
+  Stamina_Text: {fileID: 499940215}
   PlayerScript: {fileID: 1251067259}
 --- !u!1 &499940213
 GameObject:
@@ -1088,6 +1090,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 217377128348640565, guid: 28b89f64bd31c2a459a783af46f8005b, type: 3}
+    - {fileID: 5603504934150407076, guid: 28b89f64bd31c2a459a783af46f8005b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b89f64bd31c2a459a783af46f8005b, type: 3}
