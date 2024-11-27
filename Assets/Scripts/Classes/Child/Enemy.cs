@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class Enemy : Entity
 {
@@ -10,19 +9,19 @@ public class Enemy : Entity
     [SerializeField] GameObject floatingTextLink;
     [SerializeField] GameObject weaponLink;
     [SerializeField] Transform playerTransform;
-    [SerializeField] NavMeshAgent agent;
 
     [Header("Misc")]
     [SerializeField] LayerMask whatIsGround, whatIsPlayer;
 
     [SerializeField] Vector3 walkPoint;
     bool walkPointSet;
-    float walkPointRange;
+    [SerializeField]  float walkPointRange;
 
     [Header("Parameters")]
     [SerializeField] float attackCooldown;
     [SerializeField] float sightRange, attackRange;
     [SerializeField] bool playerIsInSightRange, playerIsInAttackRange;
+    [SerializeField] float speed = 1f;
 
     bool alreadyAttacked;
     WeaponItemClass weaponScript;
@@ -47,7 +46,6 @@ public class Enemy : Entity
 
         playerTransform = GameObject.Find("Player").transform;
         weaponScript = currentWeapon.GetComponent<WeaponItemClass>();
-        agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
     }
     private void ShowFloatingText(Vector3 position, string text)
@@ -73,7 +71,7 @@ public class Enemy : Entity
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet) {
-            agent.SetDestination(walkPoint);
+            rb.AddForce((walkPoint - transform.position).normalized * speed, ForceMode.Force);
         }
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
@@ -89,12 +87,12 @@ public class Enemy : Entity
 
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y + randomY, transform.position.z + randomZ);
 
-        if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround)) walkPointSet = true;
+        walkPointSet = true;
     }
 
     private void ChasePlayer()
     {
-        rb.AddForce((playerTransform.position - transform.position).normalized * 100f, ForceMode.Force);
+        rb.AddForce((playerTransform.position - transform.position).normalized * speed, ForceMode.Force);
     }
 
     private void AttackPlayer()
