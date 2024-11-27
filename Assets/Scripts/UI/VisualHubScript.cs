@@ -31,7 +31,7 @@ public class VisualHubScript : MonoBehaviour
         float curentStaminaProc = (float)curentStamina / MaxParams[2];
 
         //Changing Variable text
-        Oxygen_Slider.value  = 1-curentHpProc;
+        Health_Slider.value  = 1-curentHpProc;
         Oxygen_Slider.value  = 1-curentOxygenProc;
         Stamina_Slider.value = 1-curentStaminaProc;
     }
