@@ -33,8 +33,8 @@ public class Player : Entity
 
     // GetCurent... Events
     public int GetCurrentHealth(){return this.currentHealth;}
-    public int GetCurrentStamina() { return this.currentHealth; }
-    public int GetCurrentOxygenLevel() { return this.currentHealth; }
+    public int GetCurrentStamina() { return this.currentStamina; }
+    public int GetCurrentOxygenLevel() { return this.currentOxygenLevel; }
     // GetMax... Events
     public List<int> GetMaxParameters()
     {
