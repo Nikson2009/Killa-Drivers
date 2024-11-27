@@ -136,13 +136,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 12
-  attackCooldown: 1
+  walkPointRange: 10
+  attackCooldown: 3
   sightRange: 15
   attackRange: 10
   playerIsInSightRange: 0
   playerIsInAttackRange: 0
-  speed: 9
+  speed: 6
 --- !u!54 &2997052835332781375
 Rigidbody:
   m_ObjectHideFlags: 0
