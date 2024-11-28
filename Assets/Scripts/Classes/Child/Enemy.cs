@@ -126,6 +126,6 @@ public class Enemy : Entity
 
         print(currentTransform);
 
-        weaponScript.UseWeapon(transformToShoot);
+        weaponScript.UseWeapon(transformToShoot, transform.gameObject);
     }
 }

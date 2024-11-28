@@ -14,7 +14,7 @@ public class HarpoonItem : WeaponItemClass
     [SerializeField] float spawnForce = 725f;
     [SerializeField] int damage = 5;
     [SerializeField] int damageRandomness = 2;
-    public override void UseWeapon(Transform viewTransform)
+    public override void UseWeapon(Transform viewTransform, GameObject selfObj)
     {
 
         Vector3 rayOrigin = viewTransform.position;
@@ -26,6 +26,9 @@ public class HarpoonItem : WeaponItemClass
             GameObject weaponResult = Instantiate(harpoonLink, viewTransform.position + viewTransform.forward * spawnDistance, Quaternion.identity);
             weaponResult.GetComponent<Rigidbody>().AddForce(viewTransform.forward * spawnForce, ForceMode.Force);
             weaponResult.transform.rotation = viewTransform.rotation * Quaternion.Euler(0, 180f, 0);
+
+            Rigidbody selfRb = selfObj.GetComponent<Rigidbody>();
+            selfRb.AddForce(viewTransform.forward * spawnForce / 3.5f, ForceMode.Force);
         }
     }
 }

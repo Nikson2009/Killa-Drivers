@@ -14,7 +14,7 @@ public class LazerGunItem : WeaponItemClass
     [SerializeField] int maxDamagedEnemies = 4;
     [SerializeField] int damage = 5;
     [SerializeField] int damageRandomness = 2;
-    public override void UseWeapon(Transform viewTransform)
+    public override void UseWeapon(Transform viewTransform, GameObject selfObj)
     {
 
         Vector3 rayOrigin = viewTransform.position;

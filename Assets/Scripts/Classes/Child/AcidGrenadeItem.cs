@@ -12,7 +12,7 @@ public class AcidGrenadeItem : WeaponItemClass
     [SerializeField] float spawnForce = 725f;
     [SerializeField] int damage = 1;
     [SerializeField] int damageRandomness = 1;
-    public override void UseWeapon(Transform viewTransform)
+    public override void UseWeapon(Transform viewTransform, GameObject selfObj)
     {
         GameObject weaponResult = Instantiate(grenadeLink, viewTransform.position + viewTransform.forward * spawnDistance, Quaternion.identity);
         weaponResult.GetComponent<Rigidbody>().AddForce(viewTransform.forward * spawnForce, ForceMode.Force);

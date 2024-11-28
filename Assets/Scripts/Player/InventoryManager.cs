@@ -22,7 +22,7 @@ public class InventoryManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             WeaponItemClass currentWeaponScript = inventoryItems[0].GetComponent<WeaponItemClass>();
-            currentWeaponScript.UseWeapon(playerCamera.transform);
+            currentWeaponScript.UseWeapon(playerCamera.transform, transform.gameObject);
         }
     }
 }
