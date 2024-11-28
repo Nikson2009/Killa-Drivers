@@ -9,7 +9,6 @@ public class HarpoonItem : WeaponItemClass
 
     [Header("Parameters")]
     [SerializeField] float maxDistanceToHit = 500f;
-    [SerializeField] int maxDamagedEnemies = 3;
     [SerializeField] float spawnDistance = 1.5f;
     [SerializeField] float spawnForce = 725f;
     [SerializeField] int damage = 5;
@@ -27,8 +26,8 @@ public class HarpoonItem : WeaponItemClass
             weaponResult.GetComponent<Rigidbody>().AddForce(viewTransform.forward * spawnForce, ForceMode.Force);
             weaponResult.transform.rotation = viewTransform.rotation * Quaternion.Euler(0, 180f, 0);
 
-            Rigidbody selfRb = selfObj.GetComponent<Rigidbody>();
-            selfRb.AddForce(viewTransform.forward * spawnForce / 3.5f, ForceMode.Force);
+            CollisionDamage weaponScript = weaponResult.GetComponent<CollisionDamage>();
+            weaponScript.SetParameters(damage, damageRandomness, selfObj);
         }
     }
 }

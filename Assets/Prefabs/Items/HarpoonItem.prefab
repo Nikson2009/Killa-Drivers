@@ -46,9 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   harpoonLink: {fileID: 2646149332490628278, guid: c6f6c32b0b9c82541ad992213c6eeb74,
     type: 3}
-  maxDistanceToHit: 100
+  maxDistanceToHit: 150
   maxDamagedEnemies: 3
   spawnDistance: 1.5
-  spawnForce: 10000
+  spawnForce: 4500
   damage: 5
   damageRandomness: 3
