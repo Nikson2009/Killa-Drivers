@@ -14,7 +14,11 @@ public class SettingsScript : MonoBehaviour
     private void Start()
     {
         //Set up sensive
-        SensitiveText.text = PlayerPrefs.GetFloat("Sensitive").ToString();
+        if (!PlayerPrefs.HasKey("Sensitive"))
+        {
+            PlayerPrefs.SetFloat("Sensitive", 195);
+        }
+        SensitiveText.text = (PlayerPrefs.GetFloat("Sensitive")/195).ToString();
 
         //Set up quality
         int currentQuality = PlayerPrefs.GetInt("Quality");
@@ -27,7 +31,8 @@ public class SettingsScript : MonoBehaviour
     {
         if (float.TryParse(text.text,out float result))
         {
-            PlayerPrefs.SetFloat("Sensitive", result);
+            float Sens = result * 195;
+            PlayerPrefs.SetFloat("Sensitive", Sens);
         }
     }
     public void ChangeQuality(int currentQuality)
