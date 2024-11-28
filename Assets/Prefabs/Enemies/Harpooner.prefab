@@ -139,12 +139,12 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 8
   attackCooldown: 1.8
-  sightRange: 20
-  attackRange: 15
+  sightRange: 35
+  attackRange: 30
   playerIsInSightRange: 0
   playerIsInAttackRange: 0
-  speed: 8
-  timeToMiss: 1
+  speed: 4
+  timeToMiss: 0.5
 --- !u!54 &2997052835332781375
 Rigidbody:
   m_ObjectHideFlags: 0
