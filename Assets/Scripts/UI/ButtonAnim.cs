@@ -1,30 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using DG.Tweening;
+using UnityEngine.EventSystems;
 
-public class ButtonAnim : MonoBehaviour
+public class ButtonAnim : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] Image Arrow1;
-    [SerializeField] Image Arrow2;
-    [SerializeField] Color Color1;
-    [SerializeField] Color Color2;
-    [SerializeField] Animator _animator;
-    public void PlayAnim2(string Event)
+    [SerializeField] GameObject Arrows;
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        _animator.Play(Event);
+        Arrows.transform.DOScale(1f, 0.5f);
     }
-    public void PlayAnim(bool Visible)
+    public void OnPointerExit(PointerEventData eventData)
     {
-        if (Visible)
-        {
-            Arrow1.color = Color1;
-            Arrow2.color = Color1;
-        }
-        else
-        {
-            Arrow1.color = Color2;
-            Arrow2.color = Color2;
-        }
+        Arrows.transform.DOScale(0f, 0.5f);
+    }
+    public void KillAnimation()
+    {
+        Arrows.transform.DOKill();
     }
 }
