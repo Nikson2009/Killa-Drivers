@@ -1,19 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.EventSystems;
 
-public class ButtonAnim : MonoBehaviour
+public class ButtonAnim : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] GameObject Arrow1;
-    [SerializeField] GameObject Arrow2;
-    public void OnPointEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        Arrow1.transform.DOScaleX(10,0.01f);
+        Arrow1.transform.DOScale(1f, 0.5f);
     }
-    public void OnPointExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
-
+        Arrow1.transform.DOScale(0f, 0.5f);
     }
 }
