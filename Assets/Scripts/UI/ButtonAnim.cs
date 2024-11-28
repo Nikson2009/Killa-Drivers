@@ -2,29 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class ButtonAnim : MonoBehaviour
 {
-    [SerializeField] Image Arrow1;
-    [SerializeField] Image Arrow2;
-    [SerializeField] Color Color1;
-    [SerializeField] Color Color2;
-    [SerializeField] Animator _animator;
-    public void PlayAnim2(string Event)
+    [SerializeField] GameObject Arrow1;
+    [SerializeField] GameObject Arrow2;
+    public void OnPointEnter()
     {
-        _animator.Play(Event);
+        Arrow1.transform.DOScaleX(10,0.01f);
     }
-    public void PlayAnim(bool Visible)
+    public void OnPointExit()
     {
-        if (Visible)
-        {
-            Arrow1.color = Color1;
-            Arrow2.color = Color1;
-        }
-        else
-        {
-            Arrow1.color = Color2;
-            Arrow2.color = Color2;
-        }
+
     }
 }
