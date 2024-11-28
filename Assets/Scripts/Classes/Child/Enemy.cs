@@ -22,6 +22,7 @@ public class Enemy : Entity
     [SerializeField] float sightRange, attackRange;
     [SerializeField] bool playerIsInSightRange, playerIsInAttackRange;
     [SerializeField] float speed = 1f;
+    [SerializeField] float timeToMiss = 0f;
 
     bool alreadyAttacked;
     WeaponItemClass weaponScript;
@@ -102,7 +103,7 @@ public class Enemy : Entity
         if (!alreadyAttacked)
         {
             alreadyAttacked = true;
-            weaponScript.UseWeapon(transform);
+            StartCoroutine(Shoot(transform));
             Invoke(nameof(ResetAttack), attackCooldown);
         }
     }
@@ -110,5 +111,21 @@ public class Enemy : Entity
     private void ResetAttack()
     {
         alreadyAttacked = false;
+    }
+    
+    IEnumerator Shoot(Transform transformToShoot)
+    {
+        Transform currentTransform = new GameObject().transform;
+
+        currentTransform.position = transformToShoot.position;
+        currentTransform.rotation = transformToShoot.rotation;
+
+        print(currentTransform);
+
+        yield return new WaitForSeconds(timeToMiss);
+
+        print(currentTransform);
+
+        weaponScript.UseWeapon(transformToShoot);
     }
 }

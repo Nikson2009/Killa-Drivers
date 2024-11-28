@@ -19,11 +19,7 @@ public class Player : Entity
     }
     public override void ApplyDamage(int damage)
     {
-        print("Player Health Before Damage: " + this.currentHealth);
-
         this.currentHealth -= damage;
-
-        print("Player Health After Damage: " + this.currentHealth);
 
         if (this.currentHealth <= 0)
         {

@@ -50,7 +50,7 @@ MonoBehaviour:
     type: 3}
   shootVfxLink: {fileID: 4095732826809439606, guid: de2774f36a564254b83231d24e8036c7,
     type: 3}
-  maxDistanceToHit: 500
+  maxDistanceToHit: 18
   maxDamagedEnemies: 4
   damage: 5
   damageRandomness: 2
