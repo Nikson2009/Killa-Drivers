@@ -7,6 +7,7 @@ public class CollisionDamage : MonoBehaviour
     [Header("Links")]
     [SerializeField] GameObject objectCheckerLink;
     [SerializeField] GameObject onCollisionVfx;
+    [SerializeField] LineRenderer linerendererLink;
 
     [Header("Parameters")]
     [SerializeField] float timeToDestroy = 1f;
@@ -16,11 +17,40 @@ public class CollisionDamage : MonoBehaviour
     int thisDamageRandomness = 0;
     GameObject thisSelfObject;
 
+    Rigidbody selfRb;
+
     bool isCollided = false;
 
     private void Start()
     {
-        Destroy(transform.gameObject, 10f);
+        selfRb = thisSelfObject.GetComponent<Rigidbody>();
+        StartCoroutine(DestroySelf());
+    }
+
+    private void Update()
+    {
+        linerendererLink.SetPosition(0, transform.position);
+        linerendererLink.SetPosition(1, thisSelfObject.transform.position);
+    }
+
+    private void FixedUpdate()
+    {
+        if (isCollided)
+        {
+            selfRb.AddForce((transform.position - thisSelfObject.transform.position).normalized * force, ForceMode.Force);
+
+            if ((thisSelfObject.transform.position - transform.position).magnitude <= 4f)
+            {
+                Destroy(transform.gameObject);
+            }
+        }
+        else
+        {
+            if ((thisSelfObject.transform.position - transform.position).magnitude >= 50f)
+            {
+                Destroy(transform.gameObject);
+            }
+        }
     }
     public void SetParameters(int damage, int damageRandomness, GameObject selfObject)
     {
@@ -36,9 +66,6 @@ public class CollisionDamage : MonoBehaviour
             isCollided = true;
 
             Instantiate(onCollisionVfx, collision.transform.position, Quaternion.identity);
-
-            Rigidbody selfRb = thisSelfObject.GetComponent<Rigidbody>();
-            selfRb.AddForce((transform.position - thisSelfObject.transform.position).normalized * force, ForceMode.Force);
 
             Rigidbody thisRb = GetComponent<Rigidbody>();
             Destroy(thisRb);
@@ -64,8 +91,16 @@ public class CollisionDamage : MonoBehaviour
                     entityScript.ApplyDamage(damageResult);
                 }
             }
+        }
+    }
 
-            Destroy(transform.gameObject, timeToDestroy);
+    IEnumerator DestroySelf()
+    {
+        yield return new WaitForSeconds(4f);
+
+        if (!isCollided)
+        {
+            Destroy(transform.gameObject);
         }
     }
 }

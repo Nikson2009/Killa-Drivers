@@ -124,8 +124,6 @@ public class Enemy : Entity
 
         yield return new WaitForSeconds(timeToMiss);
 
-        print(currentTransform);
-
         weaponScript.UseWeapon(transformToShoot, transform.gameObject);
     }
 }
