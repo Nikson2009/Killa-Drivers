@@ -63,6 +63,11 @@ public class CollisionDamage : MonoBehaviour
     {
         if (!isCollided && collision.gameObject != thisSelfObject)
         {
+            if (collision.gameObject.tag == "Player")
+            {
+                gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 0f, 0f, 0f);
+            }
+
             isCollided = true;
 
             Instantiate(onCollisionVfx, collision.transform.position, Quaternion.identity);
