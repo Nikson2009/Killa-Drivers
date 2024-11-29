@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Player : Entity
 {
+    [Header("Links")]
+    [SerializeField] GameObject deadScreen;
+
     [Header("Player Parameters")]
     [SerializeField] int maxOxygenLevel;
     [SerializeField] int maxStamina;
 
     protected int currentOxygenLevel;
     protected int currentStamina;
+
+    bool isDead = false;
 
     protected override void SetUniqueStats()
     {
@@ -23,8 +28,17 @@ public class Player : Entity
 
         if (this.currentHealth <= 0)
         {
-            Destroy(transform.gameObject);
+            isDead = true;
+            deadScreen.active = true;
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
+    }
+
+    public bool GetIsDead()
+    {
+        return isDead;
     }
 
     // GetCurent... Events

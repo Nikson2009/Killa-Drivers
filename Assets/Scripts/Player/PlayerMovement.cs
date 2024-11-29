@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Camera playerCamera;
 
+    [SerializeField] Player playerScript;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,7 +33,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayer();
+        if (playerScript.GetIsDead() != true)
+        {
+            MovePlayer();
+        }
     }
 
     private void MyInput()
@@ -45,17 +50,5 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = orientation.right * horizontalInput - playerCamera.transform.forward * -verticalInput;
 
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-    }
-
-    private void SpeedControl()
-    {
-        Vector3 flatVel = new Vector3(rb.velocity.x, 0f , rb.velocity.z);
-
-        if (flatVel.magnitude > moveSpeed)
-        {
-            Vector3 limitedVel = flatVel.normalized * moveSpeed;
-
-            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
-        }
     }
 }

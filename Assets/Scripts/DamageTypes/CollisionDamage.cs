@@ -29,8 +29,15 @@ public class CollisionDamage : MonoBehaviour
 
     private void Update()
     {
-        linerendererLink.SetPosition(0, transform.position);
-        linerendererLink.SetPosition(1, thisSelfObject.transform.position);
+        if (thisSelfObject != null)
+        {
+            linerendererLink.SetPosition(0, transform.position);
+            linerendererLink.SetPosition(1, thisSelfObject.transform.position);
+        }
+        else
+        {
+            Destroy(transform.gameObject);
+        }
     }
 
     private void FixedUpdate()
@@ -65,7 +72,7 @@ public class CollisionDamage : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
-                gameObject.GetComponent<MeshRenderer>().material.color = new Color(0f, 0f, 0f, 0f);
+                gameObject.transform.localScale = new Vector3(0, 0, 0);
             }
 
             isCollided = true;
