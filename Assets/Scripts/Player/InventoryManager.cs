@@ -10,6 +10,11 @@ public class InventoryManager : MonoBehaviour
 
     GameObject[] inventoryItems = new GameObject[1];
 
+    [SerializeField] Player playerScript;
+    [SerializeField] float attackCooldown;
+
+    bool isAttacked = false;
+
     void Start()
     {
         GameObject startWeapon = Instantiate(startWeaponLink, Vector3.zero, Quaternion.identity);
@@ -19,10 +24,19 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && playerScript.GetIsDead() != true && !isAttacked)
         {
+            isAttacked = true;
+
             WeaponItemClass currentWeaponScript = inventoryItems[0].GetComponent<WeaponItemClass>();
             currentWeaponScript.UseWeapon(playerCamera.transform, transform.gameObject);
+
+            Invoke(nameof(ResetCooldown), attackCooldown);
         }
+    }
+
+    void ResetCooldown()
+    {
+        isAttacked = false;
     }
 }

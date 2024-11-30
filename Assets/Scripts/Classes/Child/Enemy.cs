@@ -120,8 +120,6 @@ public class Enemy : Entity
         currentTransform.position = transformToShoot.position;
         currentTransform.rotation = transformToShoot.rotation;
 
-        print(currentTransform);
-
         yield return new WaitForSeconds(timeToMiss);
 
         weaponScript.UseWeapon(transformToShoot, transform.gameObject);
