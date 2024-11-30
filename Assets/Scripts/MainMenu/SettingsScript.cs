@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.Rendering;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SettingsScript : MonoBehaviour
 {
@@ -18,7 +19,10 @@ public class SettingsScript : MonoBehaviour
     [SerializeField] Slider SliderBG;
     [SerializeField] AudioMixer MixerSFX;
     [SerializeField] Slider SliderSFX;
+    [Header("In Game Options")]
+    [SerializeField] CameraRotation CR;
     private bool isSetUpped = false;
+    private bool isInGame = false;
     private void Start()
     {
         //Set up sensive
@@ -43,6 +47,7 @@ public class SettingsScript : MonoBehaviour
         SliderSFX.value = SFXVolume;
 
         //Complete Set Up
+        isInGame = SceneManager.GetActiveScene().buildIndex != 0;
         isSetUpped = true;
     }
     public void ChangeSensitive(TMP_InputField text)
@@ -51,6 +56,11 @@ public class SettingsScript : MonoBehaviour
         {
             float Sens = result * 195;
             PlayerPrefs.SetFloat("Sensitive", Sens);
+            if (isInGame)
+            {
+                CR.sensetivityX = Sens;
+                CR.sensetivityY = Sens;
+            }
         }
     }
     public void ChangeQuality(int currentQuality)

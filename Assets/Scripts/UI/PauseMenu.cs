@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public bool GameIsPaused;
     [Header("Main Pause GameObject")]
     [SerializeField] GameObject MainPause;
+    [Header("Main Settings GameObject")]
+    [SerializeField] GameObject SettingsMenu;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -27,7 +30,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        SettingsMenu.SetActive(false);
     }
     private void Pause()
     {
@@ -37,5 +40,10 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
+    }
+    public void MenuButton()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
     }
 }

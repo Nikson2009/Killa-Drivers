@@ -11,8 +11,8 @@ public class CameraRotation : MonoBehaviour
     float xRotation;
     float yRotation;
 
-    [SerializeField] float sensetivityX;
-    [SerializeField] float sensetivityY;
+    public float sensetivityX;
+    public float sensetivityY;
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;

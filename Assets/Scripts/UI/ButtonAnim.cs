@@ -15,6 +15,11 @@ public class ButtonAnim : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     }
     public void KillAnimation()
     {
-        Arrows.transform.DOKill();
+        Arrows.transform.DOComplete();
+    }
+    public void ToStartPosition()
+    {
+        Arrows.transform.DOComplete();
+        Arrows.transform.DOScale(0f, 0).SetUpdate(true);
     }
 }
