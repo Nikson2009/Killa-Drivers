@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe3001bea51bd4047a9f495d7949910e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShotSound: {fileID: 8300000, guid: 156b4beb333c2064c895bc4344f27a70, type: 3}
   grenadeLink: {fileID: 3912343365788612195, guid: f96dd3226aa2e0c4193853be11405d44,
     type: 3}
   spawnDistance: 1.5

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LazerGunItem : WeaponItemClass
 {
+    [Header("Sound Params")]
+    [SerializeField] AudioSource AudioS;
+
     [Header("Links")]
     [SerializeField] GameObject objectCheckerLink;
     [SerializeField] GameObject floatingTextLink;
@@ -14,6 +17,7 @@ public class LazerGunItem : WeaponItemClass
     [SerializeField] int maxDamagedEnemies = 4;
     [SerializeField] int damage = 5;
     [SerializeField] int damageRandomness = 2;
+
     public override void UseWeapon(Transform viewTransform, GameObject selfObj)
     {
 
@@ -35,6 +39,7 @@ public class LazerGunItem : WeaponItemClass
             {
                 if (enemy.tag == "Enemy" || enemy.tag == "Player")
                 {
+                    AudioS.Play();
                     int damageResult = damage + Random.RandomRange(-damageRandomness, damageRandomness);
 
                     Entity entityScript = enemy.GetComponent<Entity>();

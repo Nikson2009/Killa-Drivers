@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    [Header("SoundsValue")]
+    [SerializeField] AudioSource AudioS;
+    [Header("Other Values")]
     [SerializeField] GameObject startWeaponLink;
 
     [SerializeField] Camera playerCamera;
@@ -32,6 +35,8 @@ public class InventoryManager : MonoBehaviour
             isAttacked = true;
 
             WeaponItemClass currentWeaponScript = inventoryItems[0].GetComponent<WeaponItemClass>();
+            AudioS.clip = currentWeaponScript.ShotSound;
+            AudioS.Play();
             currentWeaponScript.UseWeapon(playerCamera.transform, transform.gameObject);
 
             Invoke(nameof(ResetCooldown), attackCooldown);

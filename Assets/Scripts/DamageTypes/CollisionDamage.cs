@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CollisionDamage : MonoBehaviour
 {
+    [Header("Sound Params")]
+    [SerializeField] AudioClip HitSound;
+    [SerializeField] AudioSource AudioS;
     [Header("Links")]
     [SerializeField] GameObject objectCheckerLink;
     [SerializeField] GameObject onCollisionVfx;
@@ -25,6 +28,7 @@ public class CollisionDamage : MonoBehaviour
     {
         selfRb = thisSelfObject.GetComponent<Rigidbody>();
         StartCoroutine(DestroySelf());
+        AudioS.clip = HitSound;
     }
 
     private void Update()
@@ -74,6 +78,7 @@ public class CollisionDamage : MonoBehaviour
             {
                 gameObject.transform.localScale = new Vector3(0, 0, 0);
             }
+            AudioS.Play();
 
             isCollided = true;
 
