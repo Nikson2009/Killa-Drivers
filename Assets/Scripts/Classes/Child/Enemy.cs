@@ -57,7 +57,7 @@ public class Enemy : Entity
         floatingTextScript.SetText(text);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         playerIsInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerIsInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);

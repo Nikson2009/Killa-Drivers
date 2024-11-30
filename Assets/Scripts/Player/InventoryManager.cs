@@ -8,12 +8,15 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField] Camera playerCamera;
 
-    GameObject[] inventoryItems = new GameObject[1];
+    GameObject[] inventoryItems = new GameObject[2];
 
     [SerializeField] Player playerScript;
     [SerializeField] float attackCooldown;
 
     bool isAttacked = false;
+
+    [SerializeField] GameObject tropheyWeaponSlot;
+    [SerializeField] GameObject throwingWeaponSlot;
 
     void Start()
     {
@@ -22,7 +25,7 @@ public class InventoryManager : MonoBehaviour
         inventoryItems[0] = startWeapon;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && playerScript.GetIsDead() != true && !isAttacked)
         {
