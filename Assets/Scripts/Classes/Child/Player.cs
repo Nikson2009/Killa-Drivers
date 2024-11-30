@@ -21,6 +21,8 @@ public class Player : Entity
         currentOxygenLevel = maxOxygenLevel;
         currentStamina = maxStamina;
         this.currentHealth = maxHealth;
+
+        StartCoroutine(EverySecondAction());
     }
     public override void ApplyDamage(int damage)
     {
@@ -39,6 +41,30 @@ public class Player : Entity
     public bool GetIsDead()
     {
         return isDead;
+    }
+
+    IEnumerator EverySecondAction()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (!isDead)
+        {
+            if (currentOxygenLevel > 0)
+            {
+                currentOxygenLevel -= 1;
+            } else
+            {
+                currentHealth -= 3;
+            }
+
+            StartCoroutine(EverySecondAction());
+        }
+    }
+
+    // SetCurent... Events
+    public void SetCurrentOxygenLevel(int value)
+    {
+        this.currentOxygenLevel = value;
     }
 
     // GetCurent... Events
