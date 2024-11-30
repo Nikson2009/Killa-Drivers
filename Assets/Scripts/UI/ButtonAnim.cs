@@ -7,11 +7,11 @@ public class ButtonAnim : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     [SerializeField] GameObject Arrows;
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Arrows.transform.DOScale(1f, 0.5f);
+        Arrows.transform.DOScale(1f, 0.5f).SetUpdate(true);
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-        Arrows.transform.DOScale(0f, 0.5f);
+        Arrows.transform.DOScale(0f, 0.5f).SetUpdate(true);
     }
     public void KillAnimation()
     {
