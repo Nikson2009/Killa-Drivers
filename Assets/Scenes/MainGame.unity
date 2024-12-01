@@ -4054,7 +4054,7 @@ PrefabInstance:
     - target: {fileID: 8835105529948798266, guid: 8dfd3b4c4e470784999bec5f7ba1dcb7,
         type: 3}
       propertyPath: toForward.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8835105529948798266, guid: 8dfd3b4c4e470784999bec5f7ba1dcb7,
         type: 3}
@@ -4067,6 +4067,12 @@ PrefabInstance:
       propertyPath: toForward.Array.data[1]
       value: 
       objectReference: {fileID: 8961751749941516999, guid: ca54c4488bfe3844d9539bb65b3034d8,
+        type: 3}
+    - target: {fileID: 8835105529948798266, guid: 8dfd3b4c4e470784999bec5f7ba1dcb7,
+        type: 3}
+      propertyPath: toForward.Array.data[2]
+      value: 
+      objectReference: {fileID: 8961751749941516999, guid: 14cbbf36b5704fd4f92abcc5879e69a3,
         type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
