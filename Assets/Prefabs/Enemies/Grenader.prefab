@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
-  maxHealth: 105
+  maxHealth: 50
   mainCamera: {fileID: 0}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}

@@ -25,7 +25,7 @@ public class LazerGunItem : WeaponItemClass
         Vector3 rayDirection = viewTransform.forward;
 
         RaycastHit hit;
-        if (Physics.Raycast(rayOrigin, rayDirection, out hit, maxDistanceToHit))
+        if (Physics.Raycast(rayOrigin, rayDirection, out hit, maxDistanceToHit) && (hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Enemy"))
         {
             GameObject shootVfx = Instantiate(shootVfxLink, viewTransform.position + new Vector3(0, -2, 0), Quaternion.identity);
             shootVfx.transform.LookAt(hit.point);
