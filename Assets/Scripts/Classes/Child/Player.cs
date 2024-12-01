@@ -29,6 +29,16 @@ public class Player : Entity
     {
         this.currentHealth -= damage;
 
+        CheckIsDead();
+    }
+
+    public bool GetIsDead()
+    {
+        return isDead;
+    }
+
+    private void CheckIsDead()
+    {
         if (this.currentHealth <= 0)
         {
             isDead = true;
@@ -40,11 +50,6 @@ public class Player : Entity
         }
     }
 
-    public bool GetIsDead()
-    {
-        return isDead;
-    }
-
     IEnumerator EverySecondAction()
     {
         yield return new WaitForSeconds(1f);
@@ -53,10 +58,12 @@ public class Player : Entity
         {
             if (currentOxygenLevel > 0)
             {
-                currentOxygenLevel -= 1;
+                this.currentOxygenLevel -= 1;
             } else
             {
-                currentHealth -= 3;
+                this.currentHealth -= 3;
+
+                CheckIsDead();
             }
 
             StartCoroutine(EverySecondAction());

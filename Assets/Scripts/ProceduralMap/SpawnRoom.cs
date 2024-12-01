@@ -6,6 +6,9 @@ public class SpawnRoom : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(transform.gameObject);
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(transform.gameObject);
+        }
     }
 }
