@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ExplosionDamage : MonoBehaviour
 {
+    [Header("Sound Params")]
+    [SerializeField] AudioSource AudioS;
     [Header("Links")]
     [SerializeField] GameObject explosionVFXLink;
     [SerializeField] GameObject objectCheckerLink;
@@ -21,8 +23,9 @@ public class ExplosionDamage : MonoBehaviour
     IEnumerator Explosion(int damage, int damageRandomness)
     {
         yield return new WaitForSeconds(timer);
-
-        Destroy(gameObject);
+        AudioS.Play();
+        gameObject.transform.localScale = new Vector3(0, 0, 0);
+        Destroy(gameObject,1);
 
         Instantiate(explosionVFXLink, transform.position, Quaternion.identity);
 
@@ -37,7 +40,7 @@ public class ExplosionDamage : MonoBehaviour
             if (enemy.tag == "Enemy" || enemy.tag == "Player")
             {
                 Entity entityScript = enemy.GetComponent<Entity>();
-                int damageResult = damage + Random.RandomRange(-damageRandomness, damageRandomness);
+                int damageResult = damage + Random.Range(-damageRandomness, damageRandomness);
                 entityScript.ApplyDamage(damageResult);
 
                 if (enemy.tag != "Player")
