@@ -6377,7 +6377,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startWeaponLink
       value: 
-      objectReference: {fileID: 1239394281963886326, guid: e6bfd956b172340439100a69f33dadce,
+      objectReference: {fileID: 2259368610159976053, guid: 68181fade10062248bf1259b81ad65ee,
         type: 3}
     - target: {fileID: 7042499963921024980, guid: 28b89f64bd31c2a459a783af46f8005b,
         type: 3}
