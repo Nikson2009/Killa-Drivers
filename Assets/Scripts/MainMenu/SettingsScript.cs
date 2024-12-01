@@ -59,6 +59,7 @@ public class SettingsScript : MonoBehaviour
             if (isInGame)
             {
                 CR.sensetivityX = Sens;
+
                 CR.sensetivityY = Sens;
             }
         }
