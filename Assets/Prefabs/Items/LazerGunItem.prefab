@@ -218,6 +218,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lasergun
       objectReference: {fileID: 0}
+    - target: {fileID: 1129496810705857465, guid: 3dd6c14a8bd3d1d4889339ad53dbb5ed,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1d0e49bd61f10344dad0d6de3ce0d629, type: 2}
+    - target: {fileID: 3616844112969948802, guid: 3dd6c14a8bd3d1d4889339ad53dbb5ed,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1d0e49bd61f10344dad0d6de3ce0d629, type: 2}
+    - target: {fileID: 7071182760956848314, guid: 3dd6c14a8bd3d1d4889339ad53dbb5ed,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1d0e49bd61f10344dad0d6de3ce0d629, type: 2}
     - target: {fileID: 7202271454713460447, guid: 3dd6c14a8bd3d1d4889339ad53dbb5ed,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
