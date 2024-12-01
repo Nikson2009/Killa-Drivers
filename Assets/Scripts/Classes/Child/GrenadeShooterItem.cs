@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AcidGrenadeItem : WeaponItemClass
+public class GrenadeShooterItem : WeaponItemClass
 {
     [Header("Links")]
     [SerializeField] GameObject grenadeLink;
@@ -16,7 +16,7 @@ public class AcidGrenadeItem : WeaponItemClass
     {
         GameObject weaponResult = Instantiate(grenadeLink, viewTransform.position + viewTransform.forward * spawnDistance, Quaternion.identity);
         weaponResult.GetComponent<Rigidbody>().AddForce(viewTransform.forward * spawnForce, ForceMode.Force);
-        ExplosionDamage weaponScript = weaponResult.GetComponent<ExplosionDamage>();
+        ExplosionDamageOnCollision weaponScript = weaponResult.GetComponent<ExplosionDamageOnCollision>();
         weaponScript.StartExplosion(damage, damageRandomness);
     }
 }

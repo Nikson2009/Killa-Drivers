@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7011854301811410956}
-  - component: {fileID: 4957460963173724723}
+  - component: {fileID: 7170056975468247603}
   m_Layer: 0
   m_Name: GrenadeLauncher
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4957460963173724723
+--- !u!114 &7170056975468247603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1239394281963886326}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3001bea51bd4047a9f495d7949910e, type: 3}
+  m_Script: {fileID: 11500000, guid: 446f696dfdcb35b4f8043b4c0c954633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShotSound: {fileID: 8300000, guid: 3461bd0030c7a954490bee220a34b08b, type: 3}
