@@ -208,6 +208,7 @@ MonoBehaviour:
   playerObject: {fileID: 0}
   maxHealth: 100
   deadScreen: {fileID: 4967161462193634054}
+  CameraMovementScript: {fileID: 1915889319291533414}
   maxOxygenLevel: 60
   maxStamina: 15
 --- !u!82 &5525884931108597624

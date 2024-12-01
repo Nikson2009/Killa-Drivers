@@ -6,6 +6,7 @@ public class Player : Entity
 {
     [Header("Links")]
     [SerializeField] GameObject deadScreen;
+    [SerializeField] CameraRotation CameraMovementScript;
 
     [Header("Player Parameters")]
     [SerializeField] int maxOxygenLevel;
@@ -31,7 +32,8 @@ public class Player : Entity
         if (this.currentHealth <= 0)
         {
             isDead = true;
-            deadScreen.active = true;
+            deadScreen.SetActive(true);
+            CameraMovementScript.enabled = false;
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
