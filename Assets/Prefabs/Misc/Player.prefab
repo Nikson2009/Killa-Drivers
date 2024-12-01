@@ -6635,7 +6635,7 @@ MonoBehaviour:
   SliderBG: {fileID: 2197640510069419672}
   MixerSFX: {fileID: 24100000, guid: 90140befed67424418448ac11ea4e0d4, type: 2}
   SliderSFX: {fileID: 7158379808173948438}
-  CR: {fileID: 0}
+  CR: {fileID: 1915889319291533414}
 --- !u!1 &8116536312703203807
 GameObject:
   m_ObjectHideFlags: 0
