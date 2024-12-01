@@ -7,6 +7,7 @@ public class Player : Entity
     [Header("Links")]
     [SerializeField] GameObject deadScreen;
     [SerializeField] CameraRotation CameraMovementScript;
+    [SerializeField] PauseMenu PauseScript;
 
     [Header("Player Parameters")]
     [SerializeField] int maxOxygenLevel;
@@ -47,6 +48,8 @@ public class Player : Entity
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            Time.timeScale = 1f;
+            PauseScript.enabled = false;
         }
     }
 
