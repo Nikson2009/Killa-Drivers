@@ -30,6 +30,7 @@ public class ExplosionDamageOnCollision : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Player")
         {
+            gameObject.GetComponent<Collider>().enabled = false;
             AudioS.Play();
             gameObject.transform.localScale = new Vector3(0, 0, 0);
             Destroy(gameObject, 1);
