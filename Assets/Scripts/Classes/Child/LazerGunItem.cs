@@ -40,7 +40,7 @@ public class LazerGunItem : WeaponItemClass
                 if (enemy.tag == "Enemy" || enemy.tag == "Player")
                 {
                     AudioS.Play();
-                    int damageResult = damage + Random.RandomRange(-damageRandomness, damageRandomness);
+                    int damageResult = damage + Random.Range(-damageRandomness, damageRandomness);
 
                     Entity entityScript = enemy.GetComponent<Entity>();
 
