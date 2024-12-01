@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShotSound: {fileID: 8300000, guid: 3461bd0030c7a954490bee220a34b08b, type: 3}
-  grenadeLink: {fileID: 3912343365788612195, guid: f96dd3226aa2e0c4193853be11405d44,
+  grenadeLink: {fileID: 3912343365788612195, guid: 5e60b1893fc8766439c7567806682945,
     type: 3}
   spawnDistance: 1.5
   spawnForce: 2900
-  damage: 60
-  damageRandomness: 6
+  damage: 30
+  damageRandomness: 4

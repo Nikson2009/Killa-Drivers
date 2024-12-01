@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4395723503276387545}
-  - component: {fileID: 2811297479919280412}
+  - component: {fileID: 7337830288807154876}
   - component: {fileID: 8991376058941066869}
   - component: {fileID: 1259054808595280691}
   - component: {fileID: 3679738843595445481}
@@ -37,7 +37,7 @@ Transform:
   - {fileID: 5516728320312460289}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2811297479919280412
+--- !u!114 &7337830288807154876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,18 +46,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 3912343365788612195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 701c492cf47e09b4eb1addb010b990ed, type: 3}
+  m_Script: {fileID: 11500000, guid: c6be9a41cf3b6ab47b35b30f6ddd9cfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AudioS: {fileID: 3679738843595445481}
-  explosionVFXLink: {fileID: 4562318424088391830, guid: c14405f1780d4814696a48de7be6c8fd,
+  explosionVFXLink: {fileID: 4562318424088391830, guid: 5b2d9d1b16b14de409b833bf6bd79d0d,
     type: 3}
   objectCheckerLink: {fileID: 5109641386466705746, guid: 85f84883bfb9a3b418bd41e917e21528,
     type: 3}
   floatingTextLink: {fileID: 1874389639215065602, guid: 971c240890abde04092fe0064aae6e50,
     type: 3}
-  timer: 1.5
-  force: 100
+  force: 200
+  timer: 7
 --- !u!54 &8991376058941066869
 Rigidbody:
   m_ObjectHideFlags: 0
