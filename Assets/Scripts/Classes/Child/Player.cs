@@ -7,6 +7,7 @@ public class Player : Entity
     [Header("Links")]
     [SerializeField] GameObject deadScreen;
     [SerializeField] CameraRotation CameraMovementScript;
+    [SerializeField] PlayerMovement playreMovementScript;
 
     [Header("Player Parameters")]
     [SerializeField] int maxOxygenLevel;
@@ -16,7 +17,6 @@ public class Player : Entity
     protected int currentStamina;
 
     bool isDead = false;
-
     protected override void SetUniqueStats()
     {
         currentOxygenLevel = maxOxygenLevel;
@@ -74,6 +74,11 @@ public class Player : Entity
     public void SetCurrentOxygenLevel(int value)
     {
         this.currentOxygenLevel = value;
+    }
+
+    public void SetCurrentStamina(int value)
+    {
+        this.currentStamina = value;
     }
 
     // GetCurent... Events

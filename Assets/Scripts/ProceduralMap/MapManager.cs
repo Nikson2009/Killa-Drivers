@@ -8,6 +8,8 @@ public class MapManager : MonoBehaviour
 
     private Vector3 worldAnchor = new Vector3(-7.5f, 0.5f, 7.5f);
 
+    private int currentRoom = 1;
+
     private void Awake()
     {
         // Adding Start Room To Rooms
@@ -17,11 +19,18 @@ public class MapManager : MonoBehaviour
     public void AddRoom(Vector3 key)
     {
         rooms.Add(key, true);
+
+        currentRoom += 1;
     }
 
-    public bool GetRoom(Vector3 key)
+    public bool GetIsRoom(Vector3 key)
     {
         return rooms.ContainsKey(key);
+    }
+
+    public int GetCurrentRoom()
+    {
+        return currentRoom;
     }
 
     public Vector3 GetWorldAnchor()

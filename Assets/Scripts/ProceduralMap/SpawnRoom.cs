@@ -48,8 +48,6 @@ public class SpawnRoom : MonoBehaviour
 
             int index = Random.RandomRange(0, toForward.Count);
 
-            print(index);
-
             GameObject newRoom = Instantiate(toForward[index], futureRoomPos * 30 + new Vector3(0f, -0.5f, 0f), Quaternion.identity);
             newRoom.transform.parent = mapObject.transform;
 

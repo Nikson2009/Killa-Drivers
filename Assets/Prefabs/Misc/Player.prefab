@@ -170,6 +170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  maxMoveSpeed: 5
+  minMoveSpeed: 3
   orientation: {fileID: 2275877954425615602}
   playerCamera: {fileID: 3596720226559018027}
   playerScript: {fileID: 4801307443528521684}
@@ -209,8 +211,9 @@ MonoBehaviour:
   maxHealth: 100
   deadScreen: {fileID: 4967161462193634054}
   CameraMovementScript: {fileID: 1915889319291533414}
+  playreMovementScript: {fileID: 0}
   maxOxygenLevel: 60
-  maxStamina: 15
+  maxStamina: 80
 --- !u!82 &5525884931108597624
 AudioSource:
   m_ObjectHideFlags: 0
