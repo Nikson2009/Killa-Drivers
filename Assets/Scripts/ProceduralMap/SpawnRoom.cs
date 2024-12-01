@@ -21,6 +21,8 @@ public class SpawnRoom : MonoBehaviour
     MapManager mapManager;
     GameObject mapObject;
 
+    bool isCollided = false;
+
     private void Start()
     {
         mapObject = GameObject.Find("Map");
@@ -34,11 +36,21 @@ public class SpawnRoom : MonoBehaviour
         downLeft.transform.DOLocalMove(new Vector3(5, -5, 0), 3.25f);
         downRight.transform.DOLocalMove(new Vector3(-5, -5, 0), 3.25f);
     }
+
+    public void CloseAnimation()
+    {
+        upperLeft.transform.DOLocalMove(Vector3.zero, 3.25f);
+        upperRight.transform.DOLocalMove(Vector3.zero, 3.25f);
+        downLeft.transform.DOLocalMove(Vector3.zero, 3.25f);
+        downRight.transform.DOLocalMove(Vector3.zero, 3.25f);
+
+        selfBoxCollider.isTrigger = false;
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && !isCollided)
         {
-            Destroy(selfBoxCollider);
+            isCollided = true;
 
             Vector3 futureRoomPos = room.transform.localPosition / 30 + -transform.forward;
 

@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AudioS: {fileID: 5525884931108597624}
-  startWeaponLink: {fileID: 2259368610159976053, guid: d5c49b9175b430045b2dc9f1c181355e,
+  startWeaponLink: {fileID: 2259368610159976053, guid: 2ef35c39df15a954db9a304b4fd68a9a,
     type: 3}
   playerCamera: {fileID: 3596720226559018027}
   playerScript: {fileID: 4801307443528521684}
@@ -208,10 +208,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
-  maxHealth: 100
+  maxHealth: 10000
   deadScreen: {fileID: 4967161462193634054}
   CameraMovementScript: {fileID: 1915889319291533414}
-  playreMovementScript: {fileID: 0}
+  playreMovementScript: {fileID: 1214635839227613097}
   maxOxygenLevel: 60
   maxStamina: 80
 --- !u!82 &5525884931108597624

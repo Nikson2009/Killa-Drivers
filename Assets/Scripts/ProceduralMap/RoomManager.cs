@@ -5,8 +5,11 @@ using UnityEngine;
 public class RoomManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> enemiesSpawners;
+    [SerializeField] GameObject door;
 
     int thisRoomNumber;
+
+    int maxEnemiesInRoom = 0;
 
     MapManager mapManager;
     GameObject mapObject;
@@ -17,14 +20,27 @@ public class RoomManager : MonoBehaviour
 
         thisRoomNumber = mapManager.GetCurrentRoom();
 
+        foreach (GameObject spawner in enemiesSpawners)
+        {
+            EnemySpawner spawnerScript = spawner.GetComponent<EnemySpawner>();
+            spawnerScript.SpawnEnemies(Mathf.RoundToInt(thisRoomNumber / 5) + 1, Mathf.Clamp(Mathf.RoundToInt(thisRoomNumber / 5), 0, 4));
+
+            maxEnemiesInRoom += Mathf.RoundToInt(thisRoomNumber / 5) + 1;
+        }
+
         StartCoroutine(CheckRoomCount());
     }
 
     IEnumerator CheckRoomCount()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
 
-        if (mapManager.GetCurrentRoom() >= thisRoomNumber + 4)
+        if (mapManager.GetCurrentRoom() >= thisRoomNumber + 3)
+        {
+            SpawnRoom doorScript = door.GetComponent<SpawnRoom>();
+            doorScript.CloseAnimation();
+        }
+        else if (mapManager.GetCurrentRoom() >= thisRoomNumber + 4)
         {
             Destroy(transform.gameObject);
         }

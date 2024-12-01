@@ -11,7 +11,7 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField] Camera playerCamera;
 
-    GameObject[] inventoryItems = new GameObject[2];
+    List<GameObject> inventoryItems;
 
     [SerializeField] Player playerScript;
     [SerializeField] float attackCooldown;
@@ -21,11 +21,30 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] GameObject tropheyWeaponSlot;
     [SerializeField] GameObject throwingWeaponSlot;
 
+    int currentWeapon = 0;
+
+    public bool TryAddWeapon(GameObject weapon)
+    {
+        bool isAdded;
+
+        if (inventoryItems.Count < 3)
+        {
+            inventoryItems.Add(weapon);
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     void Start()
     {
         GameObject startWeapon = Instantiate(startWeaponLink, Vector3.zero, Quaternion.identity);
         startWeapon.transform.parent = transform;
-        inventoryItems[0] = startWeapon;
+        inventoryItems.Add(startWeapon);
+        print(inventoryItems);
     }
 
     void FixedUpdate()
@@ -34,13 +53,25 @@ public class InventoryManager : MonoBehaviour
         {
             isAttacked = true;
 
-            WeaponItemClass currentWeaponScript = inventoryItems[0].GetComponent<WeaponItemClass>();
+            WeaponItemClass currentWeaponScript = inventoryItems[currentWeapon].GetComponent<WeaponItemClass>();
             AudioS.clip = currentWeaponScript.ShotSound;
             AudioS.Play();
             currentWeaponScript.UseWeapon(playerCamera.transform, transform.gameObject);
 
             Invoke(nameof(ResetCooldown), attackCooldown);
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            currentWeapon += 1;
+            currentWeapon = Mathf.Clamp(currentWeapon, 0, 2);
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            currentWeapon -= 1;
+            currentWeapon = Mathf.Clamp(currentWeapon, 0, 2);
+        }
+
     }
 
     void ResetCooldown()

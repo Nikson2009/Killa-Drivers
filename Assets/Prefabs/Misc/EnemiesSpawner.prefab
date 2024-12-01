@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7659840909249627821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1427827674812574134}
+  - component: {fileID: 608052337423652080}
+  m_Layer: 0
+  m_Name: EnemiesSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1427827674812574134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659840909249627821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.0000057, y: 8, z: 7.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &608052337423652080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659840909249627821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee8f469c5bc67f47b80ea1551c947cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesDifficults:
+  - difficult:
+    - {fileID: 351231052381689017, guid: 9b9d4050164b4d841923529b9b4f033e, type: 3}
+  - difficult:
+    - {fileID: 351231052381689017, guid: 9b9d4050164b4d841923529b9b4f033e, type: 3}
+    - {fileID: 351231052381689017, guid: ae1f3ec879e5411458a193b670037308, type: 3}
+  - difficult:
+    - {fileID: 351231052381689017, guid: 9b9d4050164b4d841923529b9b4f033e, type: 3}
+    - {fileID: 351231052381689017, guid: ae1f3ec879e5411458a193b670037308, type: 3}
+    - {fileID: 351231052381689017, guid: 3a6ca2b0c9894c34c947bb4e810fdeea, type: 3}
+  - difficult:
+    - {fileID: 351231052381689017, guid: 9b9d4050164b4d841923529b9b4f033e, type: 3}
+    - {fileID: 351231052381689017, guid: a9b421c1d4dd44345bcf11f79e88ec3f, type: 3}
+    - {fileID: 351231052381689017, guid: 3a6ca2b0c9894c34c947bb4e810fdeea, type: 3}
+  - difficult:
+    - {fileID: 351231052381689017, guid: 9b9d4050164b4d841923529b9b4f033e, type: 3}
+    - {fileID: 351231052381689017, guid: a9b421c1d4dd44345bcf11f79e88ec3f, type: 3}
+    - {fileID: 351231052381689017, guid: 3a6ca2b0c9894c34c947bb4e810fdeea, type: 3}
+    - {fileID: 351231052381689017, guid: ae1f3ec879e5411458a193b670037308, type: 3}

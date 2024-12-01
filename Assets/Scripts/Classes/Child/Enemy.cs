@@ -9,6 +9,7 @@ public class Enemy : Entity
     [SerializeField] GameObject floatingTextLink;
     [SerializeField] GameObject weaponLink;
     [SerializeField] Transform playerTransform;
+    [SerializeField] GameObject weaponToGrabLink;
 
     [Header("Misc")]
     [SerializeField] LayerMask whatIsGround, whatIsPlayer;
@@ -39,6 +40,8 @@ public class Enemy : Entity
         if (this.currentHealth <= 0)
         {
             Destroy(transform.gameObject);
+
+            Instantiate(weaponToGrabLink, transform.position, Quaternion.identity);
         }
     }
 
