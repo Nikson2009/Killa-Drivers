@@ -133,6 +133,8 @@ MonoBehaviour:
   weaponLink: {fileID: 1239394281963886326, guid: e6bfd956b172340439100a69f33dadce,
     type: 3}
   playerTransform: {fileID: 0}
+  weaponToGrabLink: {fileID: 6283871676037898754, guid: 6ee8911f3d95a6749ba66fbb5cbbf132,
+    type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256

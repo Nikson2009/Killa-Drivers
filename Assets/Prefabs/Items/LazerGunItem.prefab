@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShotSound: {fileID: 8300000, guid: a3bd9340f7d760b47b6cf1f6b844b5ea, type: 3}
+  itemToGrab: {fileID: 4966801370263040540, guid: 41f6221ca49ba4e44b3a783142094ede,
+    type: 3}
   AudioS: {fileID: 8689039553859742740}
   objectCheckerLink: {fileID: 5109641386466705746, guid: 04363a0f266da0d4c8719d902b830d50,
     type: 3}

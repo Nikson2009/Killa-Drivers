@@ -4420,26 +4420,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4801345652137747081, guid: 28b89f64bd31c2a459a783af46f8005b,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.6266216
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801345652137747081, guid: 28b89f64bd31c2a459a783af46f8005b,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.6266216
-      objectReference: {fileID: 0}
-    - target: {fileID: 4801345652137747081, guid: 28b89f64bd31c2a459a783af46f8005b,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.6301887
-      objectReference: {fileID: 0}
-    - target: {fileID: 4967161462193634054, guid: 28b89f64bd31c2a459a783af46f8005b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4967275647917288966, guid: 28b89f64bd31c2a459a783af46f8005b,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -4469,33 +4449,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7218253640409038677, guid: 28b89f64bd31c2a459a783af46f8005b,
-        type: 3}
-      propertyPath: m_text
-      value: 'Return To Menu
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7218253640409038677, guid: 28b89f64bd31c2a459a783af46f8005b,
-        type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7218253640409038677, guid: 28b89f64bd31c2a459a783af46f8005b,
-        type: 3}
-      propertyPath: m_fontColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7218253640409038677, guid: 28b89f64bd31c2a459a783af46f8005b,
-        type: 3}
-      propertyPath: m_fontColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7218253640409038677, guid: 28b89f64bd31c2a459a783af46f8005b,
-        type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

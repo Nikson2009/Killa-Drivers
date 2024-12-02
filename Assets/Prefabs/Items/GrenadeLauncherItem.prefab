@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7011854301811410956}
   - component: {fileID: 7170056975468247603}
   m_Layer: 0
-  m_Name: GrenadeLauncher
+  m_Name: GrenadeLauncherItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShotSound: {fileID: 8300000, guid: 3461bd0030c7a954490bee220a34b08b, type: 3}
+  itemToGrab: {fileID: 9010186277432814021, guid: 3a91a203fb39c84419d42621df08354c,
+    type: 3}
   grenadeLink: {fileID: 3912343365788612195, guid: 5e60b1893fc8766439c7567806682945,
     type: 3}
   spawnDistance: 1.5
