@@ -16,7 +16,7 @@ public class OxygenBubblesSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(cooldownToSpawn);
 
-        Instantiate(oxygenBubbleLink, transform.position, Quaternion.identity);
+        Instantiate(oxygenBubbleLink, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
 
         StartCoroutine(Spawner());
     }

@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerObject: {fileID: 0}
-  maxHealth: 10000
+  maxHealth: 150
   deadScreen: {fileID: 4967161462193634054}
   CameraMovementScript: {fileID: 1915889319291533414}
   playreMovementScript: {fileID: 1214635839227613097}
