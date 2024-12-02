@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponItemLink: {fileID: 2259368610159976053, guid: 68181fade10062248bf1259b81ad65ee,
     type: 3}
+  icon: {fileID: 21300000, guid: 6c31295a2ccff054486246e8e0a20fbe, type: 3}
 --- !u!65 &5903354462351170044
 BoxCollider:
   m_ObjectHideFlags: 0
