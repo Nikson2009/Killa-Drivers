@@ -4,7 +4,8 @@ using UnityEngine;
 using DG.Tweening;
 
 public class SpawnRoom : MonoBehaviour
-{
+{   [Header("Sounds")]
+    [SerializeField] AudioSource AudioS;
     [Header("Links")]
     [SerializeField] GameObject room;
     [SerializeField] BoxCollider selfBoxCollider;
@@ -31,6 +32,7 @@ public class SpawnRoom : MonoBehaviour
 
     private void OpenAnimation()
     {
+        AudioS.Play();
         upperLeft.transform.DOLocalMove(new Vector3(5, 5, 0), 3.25f);
         upperRight.transform.DOLocalMove(new Vector3(-5, 5, 0), 3.25f);
         downLeft.transform.DOLocalMove(new Vector3(5, -5, 0), 3.25f);
